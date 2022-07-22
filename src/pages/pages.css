@@ -48,7 +48,8 @@
     color: white;
 }
 .log_left_body{
-    margin-top: 200px;
+    margin-top: 150px;
+    /* border: 0.2em black solid; */
 }
 .log_bienv{
     line-height: 1.3;

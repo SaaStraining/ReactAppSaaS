@@ -1,85 +1,53 @@
 @font-face {
     font-family: 'Circular Std';
-    src: url(../res/CIRCULARSTD-MEDIUM.OTF);
+    src: url(../fonts/CIRCULARSTD-MEDIUM.OTF);
 }
   
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
-/*          --Login---          */
-.Login{
+
+
+
+/*****  login page css  *****/
+.Login-container{
     font-family: 'Circular Std';
-    display: flex;
+    /* display: flex; */
     height: 100vh;
 }
-.login_left{
-    flex: 6;
-    padding-top: 3vh;
-}
 .login_right{
-    flex: 5;
+    /* flex: 5; */
     background-image: url('../assets/images/login_back.png');
     background-size: cover;
 }
-.log_left_top{
-    display: flex;
-}
+
 .log_ret{
-    float: right;
-    margin-left: 89vh;
-    margin-right: 6vh;
-    text-decoration: none;
-    border: #319CFF 1px solid;
-    border-radius: 20px;
-    padding: 5px 15px 5px 15px;
-    width: 60px;
-    height: 19px;
-}
-.log_logo{
-    margin-left: 5vh;
-    text-decoration: none;
-    font-size: 20px;
-}
-.log_logo:visited, .log_ret:visited{
-    text-decoration: none;
+    border-color:  #319CFF;
     color: #319CFF;
 }
+
 .log_ret:hover{
-    background-color: #319CFF;
-    color: white;
+    background-color: #319CFF ;
 }
-.log_left_body{
-    margin-top: 200px;
-}
-.log_bienv{
-    line-height: 1.3;
-    font-size: 2.5em;
-}
-.log_form{
-    margin-top: 50px;
-}
+
 .log_inner_form input{
     font-family: 'Circular Std';
-    margin-top: 3vh;
-    width: 37vh;
-    height: 5.9vh;
     background-color: #E1E1E1;
-    border: none;
-    border-radius: 10px;
-    padding-left: 80px;
-    font-size: 1em;
 }
 .log_inner_form button{
-    margin-top: 5vh;
-    width: 39vh;
-    height: 7vh;
-    border-radius: 100px;
-    background-color: #319CFF;
-    color: white;
-    border: none;
     font-family: 'Circular Std';
-    font-size: 1.3em;
-    box-shadow: 0px 4px 40px 0px rgba(49, 156, 255, 0.5);
+    background-color: #319CFF ;
+     box-shadow: 0px 4px 40px 0px rgba(49, 156, 255, 0.5);
 
+}
+
+.log_logo{
+    color:#319CFF;
+}
+
+::placeholder { 
+    color: #999999;
+    opacity: 1; 
+    font-family: 'Circular Std';
 }
 .log_login{
     background: url(../assets/icons/user.png) no-repeat scroll 27px 13px;
@@ -88,9 +56,4 @@
 .log_mdp{
     background: url(../assets/icons/password.png) no-repeat scroll 27px 13px;
     background-size: 25px;
-}
-::placeholder { 
-    color: #999999;
-    opacity: 1; 
-    font-family: 'Circular Std';
 }

@@ -4,9 +4,13 @@ import SideBar from './componnents/SideBar';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App flex">
       {/* <Login/> */}
       <SideBar/>
+      <div>
+        
+
+      </div>
     </div>
   );
 }

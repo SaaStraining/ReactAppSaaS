@@ -6,7 +6,7 @@ function SideBar() {
 
   return (
 
-    <aside className='w-64 side-nav h-screen overflow-y-auto py-4 px-3 rounded dark:bg-gray-800 '>
+    <aside className='w-1/5 side-nav h-screen overflow-y-auto py-4 px-3 rounded dark:bg-gray-800 '>
        <div className='w-full m-0'>
           <div className='side-header w-full grid place-items-center h-10 text-center  m-0 mb-4'>
             <h3 className=''>LOGO</h3>

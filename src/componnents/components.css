@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Circular Std';
+    src: url(../fonts/CIRCULARSTD-MEDIUM.OTF);
+}
+  
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+.NavBar{
+    font-family: 'Circular Std';
+}

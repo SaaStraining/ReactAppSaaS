@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Circular Std';
+  src: url(../src/fonts/CIRCULARSTD-MEDIUM.OTF);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
 body {
   margin: 0;
 }
@@ -9,8 +16,10 @@ body {
 .side-header{
   background-color: #303C54;
 }
+
 .side-nav{
   background-color: #3C4B64;
-}
+  font-family: Circular Std;
 
+}
 

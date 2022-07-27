@@ -6,4 +6,11 @@ body {
   margin: 0;
 }
 
+.side-header{
+  background-color: #303C54;
+}
+.side-nav{
+  background-color: #3C4B64;
+}
+
 

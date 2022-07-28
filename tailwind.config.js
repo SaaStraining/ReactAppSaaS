@@ -131,7 +131,11 @@ module.exports = {
         700: '#BF125D',
         800: '#99154B',
         900: '#751A3D'
-      }
+      },
+      second :'#E2EDFF',
+      input :'#F5F5F5',
+      primary : '#00A3FF',
+      shadow : '#319CFF',
     }
   },
   darkMode: "class",

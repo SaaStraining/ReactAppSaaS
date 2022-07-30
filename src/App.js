@@ -1,4 +1,5 @@
-import './App.css';
+// import './App.css';
+import './index.css'
 import Login from './pages/Login';
 import SideBar from './componnents/SideBar';
 import NavBar from './componnents/NavBar';

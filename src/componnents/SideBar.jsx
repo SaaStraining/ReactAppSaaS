@@ -112,13 +112,13 @@ function SideBar() {
                       ...transitionStyles[state],
                     }}
                   >
-                    <a href="#" className="block w-2/3 mb-1">
+                    <a href="#" className="block w-5/6 mb-1 border">
                      Historique Devis / Projet
                     </a>
-                    <a href="#" className="block  w-2/3 mb-1">
+                    <a href="#" className="block  w-5/6 mb-1">
                       Calcul Devis / Projet
                     </a>
-                    <a href="#" className="block  w-2/3 mb-1">
+                    <a href="#" className="block  w-5/6 mb-1">
                       Devis Réel par projet
                     </a>
                   </div>

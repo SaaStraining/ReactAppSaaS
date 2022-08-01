@@ -28,15 +28,15 @@ function SideBar() {
     display: "block",
   };
   const transitionStyles = {
-    entering: { opacity: 0 },
+    entering: { opacity: 0.5 },
     entered: { opacity: 1 },
-    exiting: { opacity: 1 },
+    exiting: { opacity: 0.5 },
     exited: { opacity: 0 },
   };
   return (
     <aside className="w-1/5 side-nav h-screen overflow-y-auto pb-4  scrollbar-hide  dark:bg-gray-800 ">
       <div className="w-full m-0">
-        <div className="side-header w-full grid place-items-center h-12 text-center  m-0 mb-4">
+        <div className="side-header w-full grid place-items-center h-16 text-center  m-0 mb-4">
           <h3 className="m-0 text-white font-extrabold">LOGO</h3>
         </div>
         <div className="w-100 h-auto mb-11 text-white">
@@ -57,31 +57,34 @@ function SideBar() {
             )}
           </div>
           {/* <FontAwesomeIcon icon="fa-solid fa-angle-down" /> */}
-          <div className="dropmenu  flex flex-col text-justify rounded-lg  justify-center w-100 mx-4 mt-2 h-auto mb-11 text-white">
-            <Transition in={toggle} timeout={300}>
+          
+       {/* chanfge it just to see if it will be better  than the old version transition */}
+            <Transition in={toggle} timeout={500} unmountOnExit>
               {(state) =>
                 toggle ? (
                   <div
-                    className="flex pl-9 flex-col dropdown-links py-2"
+                    className="dropmenu  flex flex-col text-justify rounded-lg  justify-center w-100 mx-4 mt-2 h-auto mb-11 text-white"
                     style={{
                       ...defaultStyle,
                       ...transitionStyles[state],
                     }}
                   >
-                    <a href="#" className="block w-2/3 mb-1">
-                      Liste des Employés
-                    </a>
-                    <a href="#" className="block  w-2/3 mb-1">
-                      Ajouter Employé
-                    </a>
-                    <a href="#" className="block  w-2/3 mb-1">
-                      Ajouter Rôles
-                    </a>
+                    <div className="flex pl-9 flex-col dropdown-links py-2">
+                      <a href="#" className="block w-2/3 mb-1">
+                        Liste des Employés
+                      </a>
+                      <a href="#" className="block  w-2/3 mb-1">
+                        Ajouter Employé
+                      </a>
+                      <a href="#" className="block  w-2/3 mb-1">
+                        Ajouter Rôles
+                      </a>
+                    </div>
                   </div>
                 ) : null
               }
             </Transition>
-          </div>
+        
         </div>
         <div className="w-100 h-auto mb-11 text-white">
           <div className="flex flex-start pl-4 text-white ">
@@ -112,7 +115,7 @@ function SideBar() {
                       ...transitionStyles[state],
                     }}
                   >
-                    <a href="#" className="block w-5/6 mb-1 border">
+                    <a href="#" className="block w-5/6 mb-1 ">
                      Historique Devis / Projet
                     </a>
                     <a href="#" className="block  w-5/6 mb-1">

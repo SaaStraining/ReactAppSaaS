@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Transition } from "react-transition-group";
+import { Link } from "react-router-dom";
 // import { Dropdown,Flowbite, DarkThemeToggle } from 'flowbite-react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleUp, faAngleDown } from "@fortawesome/free-solid-svg-icons";
@@ -73,9 +74,8 @@ function SideBar() {
                       <a href="#" className="block w-2/3 mb-1">
                         Liste des Employés
                       </a>
-                      <a href="#" className="block  w-2/3 mb-1">
-                        Ajouter Employé
-                      </a>
+                      <Link to="rh" className="block  w-2/3 mb-1">Ajouter Employé </Link>
+                      
                       <a href="#" className="block  w-2/3 mb-1">
                         Ajouter Rôles
                       </a>

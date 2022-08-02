@@ -1,22 +1,28 @@
 // import './App.css';
 import './index.css'
-import Login from './pages/Login';
-import SideBar from './componnents/SideBar';
-import NavBar from './componnents/NavBar';
-import AddHumanResource from './componnents/AddHumanResource';
+import  {BrowserRouter as Router, Routes ,Route} from "react-router-dom"
+import HomePage from './pages/HomePage';
+import ControlPanel from './pages/ControlPanel';
 
 function App() {
   return (
-    <div className="App flex">
-      {/* <Login/> */}
-      <SideBar/>
-      <div className='block w-4/5'>
-        <NavBar/>
-        <AddHumanResource/>
-      </div>
-      
+    <div className="App ">
+     
+      <Router>
+        <Routes>
+          <Route path='/' element={<HomePage/>} />
+          <Route path='/admin' element={<ControlPanel/>} />
+        </Routes>
+      </Router>
     </div>
   );
 }
 
 export default App;
+
+{/* <Login/>
+<SideBar/>
+<div className='block w-4/5'>
+  <NavBar/>
+  <AddHumanResource/>
+</div> */}

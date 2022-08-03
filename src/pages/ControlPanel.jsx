@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes,Route } from "react-router-dom";
+import { Routes,Route, Outlet } from "react-router-dom";
 import AddHumanResource from "../componnents/HumanRessources/AddHumanResource";
 import NavBar from "../componnents/NavBar";
 import SideBar from "../componnents/SideBar";
@@ -8,11 +8,11 @@ function ControlPanel() {
   return (
     <div className="flex">
         <SideBar/>
-        <div className="block w-4/5">
+        <div className="block w-4/5 ml-72">
             <NavBar/>
-            <Routes>
-                <Route path="" element={<AddHumanResource/>} />
-            </Routes>
+            <div className=" text-center  ">
+                <Outlet />
+            </div>
         </div>
     </div>
   );

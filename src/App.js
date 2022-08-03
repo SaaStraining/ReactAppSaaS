@@ -1,17 +1,35 @@
 // import './App.css';
-import './index.css'
-import  {BrowserRouter as Router, Routes ,Route} from "react-router-dom"
-import HomePage from './pages/HomePage';
-import ControlPanel from './pages/ControlPanel';
+import "./index.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// import Login from "./pages/Login";
+
+import HomePage from "./pages/HomePage";
+import ControlPanel from "./pages/ControlPanel";
+import AddHumanResource from "./componnents/HumanRessources/AddHumanResource";
+import ListEmp from "./componnents/HumanRessources/ListEmp";
+import AddCompte from "./componnents/HumanRessources/AddCompte";
+import NotFound from "./pages/NotFound";
+import RealDevis from "./componnents/prodServ/RealDevis";
+import CalculDevis from "./componnents/prodServ/CalculDevis";
+import HistoriqueDP from "./componnents/prodServ/HistoriqueDP";
+import StatisPage from "./componnents/Statistique/StatisPage";
 
 function App() {
   return (
     <div className="App ">
-     
       <Router>
         <Routes>
-          <Route path='/' element={<HomePage/>} />
-          <Route path='/admin' element={<ControlPanel/>} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/admin" element={<ControlPanel />}>
+            <Route path="emps" element={<ListEmp />} />
+            <Route path="ajouter-emp" element={<AddHumanResource />} />
+            <Route path="ajouter-cmpt" element={<AddCompte />} />
+            <Route path="old-dp" element={<HistoriqueDP />} />
+            <Route path="calcul-devis" element={<CalculDevis/>} />
+            <Route path="devis-reel" element={<RealDevis />} />
+            <Route path="statis" element={<StatisPage />} />
+          </Route>
+          <Route path="*" element={<NotFound/>}/>
         </Routes>
       </Router>
     </div>
@@ -20,9 +38,11 @@ function App() {
 
 export default App;
 
-{/* <Login/>
+{
+  /* <Login/>
 <SideBar/>
 <div className='block w-4/5'>
   <NavBar/>
   <AddHumanResource/>
-</div> */}
+</div> */
+}

@@ -3,7 +3,9 @@ import "../pages.css";
 import { Link } from "react-router-dom";
 import { useState } from 'react';
 import { axiosInstance } from '../../AxiosInstance/axios.instance';
-import { toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 function AdminLogin() {
 
@@ -20,16 +22,8 @@ function AdminLogin() {
               password
           }
       ).then(res => {
-        toast('🦄 Wow so easy!', {
-          position: "top-right",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          });
-          toast("Successfully logged in", {
+        
+          toast("Login avec succes", {
               type: toast.TYPE.SUCCESS,
               position: toast.POSITION.BOTTOM_CENTER
           });
@@ -49,6 +43,7 @@ function AdminLogin() {
 
   return (
     <div className="Login-container w-full flex text-center">
+            <ToastContainer />
       <div className="flex flex-col w-7/12  m-0   pt-5 ">
         <div className="flex justify-between mx-16 ">
           <a href="#" className="log_logo text-xl ">

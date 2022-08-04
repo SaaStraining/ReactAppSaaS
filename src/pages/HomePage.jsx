@@ -1,15 +1,19 @@
-import React from "react";
+import React from 'react';
+import { ToastContainer, toast } from 'react-toastify';
 
-function Homepage() {
-    
+import 'react-toastify/dist/ReactToastify.css';
+// minified version is also included
+// import 'react-toastify/dist/ReactToastify.min.css';
+
+function HomePage(){
+  const notify = () => toast("Wow so easy !");
+
   return (
     <div>
-        <p>
-            HomePage
-        </p>
+      <button onClick={notify}>Notify !</button>
+      <ToastContainer />
     </div>
-  
-  )
+  );
 }
 
-export default Homepage;
+export default HomePage;

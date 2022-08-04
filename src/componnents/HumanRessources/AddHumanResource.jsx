@@ -1,6 +1,6 @@
 import React from 'react'
-import IllustRh from '../assets/illustrations/illustration_rh.png'
-import './components.css'
+import IllustRh from '../../assets/illustrations/illustration_rh.png'
+import '../components.css'
 
 function AddHumanResource() {
   return (

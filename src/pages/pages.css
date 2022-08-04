@@ -24,7 +24,7 @@
     border-color:  #319CFF;
     color: #319CFF;
 }
-
+ 
 .log_ret:hover{
     background-color: #319CFF ;
 }
@@ -36,7 +36,7 @@
 .log_inner_form button{
     font-family: 'Circular Std';
     background-color: #319CFF ;
-     box-shadow: 0px 4px 40px 0px rgba(49, 156, 255, 0.5);
+    box-shadow: 0px 4px 40px 0px rgba(49, 156, 255, 0.5);
 
 }
 

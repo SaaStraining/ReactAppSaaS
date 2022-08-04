@@ -6,12 +6,12 @@ import SideBar from "../componnents/SideBar";
 
 function ControlPanel() {
   return (
-    <div className="flex scrollbar-hide ">
+    <div className="flex ">
       <SideBar />
-      <div className="block w-4/5 ml-72 scrollbar-hide  ">
+      <div className="block w-4/5 ml-72   ">
         <NavBar />
         <div className=" text-center mt-20  ">
-          <div className="scrollbar-hide">
+          <div className="overflow-y-scroll">
             <Outlet />
           </div>
         </div>

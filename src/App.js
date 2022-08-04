@@ -1,7 +1,6 @@
 // import './App.css';
 import "./index.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import Login from "./pages/Login";
 
 import HomePage from "./pages/HomePage";
 import ControlPanel from "./pages/ControlPanel";
@@ -13,6 +12,9 @@ import RealDevis from "./componnents/prodServ/RealDevis";
 import CalculDevis from "./componnents/prodServ/CalculDevis";
 import HistoriqueDP from "./componnents/prodServ/HistoriqueDP";
 import StatisPage from "./componnents/Statistique/StatisPage";
+import AdminLogin from "./pages/Logins/AdminLogin";
+import EditorLogin from "./pages/Logins/EditorLogin";
+import VisitorLogin from "./pages/Logins/VisitorLogin";
 
 function App() {
   return (
@@ -20,7 +22,10 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/admin" element={<ControlPanel />}>
+          <Route path="/admin" element={<AdminLogin/>} />
+          <Route path="/editor" element={<EditorLogin/>} />
+          <Route path="/visitor" element={<VisitorLogin/>} />
+          <Route path="/dashboard" element={<ControlPanel />}>
             <Route path="emps" element={<ListEmp />} />
             <Route path="ajouter-emp" element={<AddHumanResource />} />
             <Route path="ajouter-cmpt" element={<AddCompte />} />

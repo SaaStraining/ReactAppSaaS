@@ -51,7 +51,7 @@ function AdminLogin() {
           </div>
         </div>
       </div>
-      <div className="login_right w-5/12  "></div>
+      <div className="login_admin_photo w-5/12  "></div>
     </div>
   );
 }

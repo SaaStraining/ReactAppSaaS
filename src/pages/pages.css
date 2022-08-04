@@ -14,9 +14,14 @@
     /* display: flex; */
     height: 100vh;
 }
-.login_right{
+.login_admin_photo{
     /* flex: 5; */
     background-image: url('../assets/images/login_back.png');
+    background-size: cover;
+}
+.login_editor_photo{
+    /* flex: 5; */
+    background-image: url('../assets/images/bg-editor.png');
     background-size: cover;
 }
 
@@ -24,9 +29,16 @@
     border-color:  #319CFF;
     color: #319CFF;
 }
+.log_ret_ed{
+    border-color:  #32B75F;
+    color: #32B75F;
+}
  
 .log_ret:hover{
     background-color: #319CFF ;
+}
+.log_ret_ed:hover{
+    background-color: #32B75F ;
 }
 
 .log_inner_form input{
@@ -42,6 +54,9 @@
 
 .log_logo{
     color:#319CFF;
+}
+.log_logo_ed{
+    color:#32B75F;
 }
 
 ::placeholder { 

@@ -1,8 +1,52 @@
 import React from "react";
 import "../pages.css";
 import { Link } from "react-router-dom";
+import { useState } from 'react';
+import { axiosInstance } from '../../AxiosInstance/axios.instance';
+import { toast } from 'react-toastify';
 
 function AdminLogin() {
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const loginAdmin = (e) => {
+      e.preventDefault();
+
+      axiosInstance.post(
+          '/admin/login',
+          {
+              email,
+              password
+          }
+      ).then(res => {
+        toast('🦄 Wow so easy!', {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          });
+          toast("Successfully logged in", {
+              type: toast.TYPE.SUCCESS,
+              position: toast.POSITION.BOTTOM_CENTER
+          });
+
+          console.log(res.data)
+      })
+          .catch(error => {
+              toast("Invalid credentials", {
+                  type: toast.TYPE.ERROR,
+                  position: toast.POSITION.BOTTOM_CENTER
+              });
+              setEmail("");
+              setPassword("");
+          })
+  }
+
+
   return (
     <div className="Login-container w-full flex text-center">
       <div className="flex flex-col w-7/12  m-0   pt-5 ">
@@ -24,12 +68,14 @@ function AdminLogin() {
             Authentification.
           </div>
           <div className="form-container ">
-            <form className="log_inner_form ">
+            <form className="log_inner_form " onSubmit={loginAdmin}>
               <input
                 type="text"
                 className="log_login rounded-xl w-2/4 pl-20 h-14  mt-4 text-base "
                 placeholder="Nom d'utilisateur..."
                 name=""
+                value={email} 
+                onChange={(e) => setEmail(e.target.value)} 
                 id=""
               />
               <br />
@@ -38,6 +84,8 @@ function AdminLogin() {
                 className="log_mdp rounded-xl w-2/4 pl-20 h-14 mt-4 text-base"
                 placeholder="Mot de passe..."
                 name=""
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
                 id=""
               />
               <br />

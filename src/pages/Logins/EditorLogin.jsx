@@ -26,7 +26,7 @@ function EditorLogin() {
             <form className="log_inner_form ">
               <input
                 type="text"
-                className="log_login rounded-xl w-2/4 pl-20 h-14  mt-4 text-base "
+                className="log_login_ed rounded-xl w-2/4 pl-20 h-14  mt-4 text-base "
                 placeholder="Nom d'utilisateur..."
                 name=""
                 id=""
@@ -34,7 +34,7 @@ function EditorLogin() {
               <br />
               <input
                 type="password"
-                className="log_mdp rounded-xl w-2/4 pl-20 h-14 mt-4 text-base"
+                className="log_mdp_ed rounded-xl w-2/4 pl-20 h-14 mt-4 text-base"
                 placeholder="Mot de passe..."
                 name=""
                 id=""
@@ -42,7 +42,7 @@ function EditorLogin() {
               <br />
               <button
                 type="submit"
-                className="text-white mt-8 w-2/5 h-14 text-xl rounded-full   hover:shadow-none"
+                className="button-con-ed text-white mt-8 w-2/5 h-14 text-xl rounded-full   hover:shadow-none"
               >
                 Se connecter
               </button>

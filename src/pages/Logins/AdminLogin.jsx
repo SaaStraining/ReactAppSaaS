@@ -86,7 +86,7 @@ function AdminLogin() {
               <br />
               <button
                 type="submit"
-                className="text-white mt-8 w-2/5 h-14 text-xl rounded-full   hover:shadow-none"
+                className="button-con-ad text-white mt-8 w-2/5 h-14 text-xl rounded-full  hover:shadow-none"
               >
                 Se connecter
               </button>

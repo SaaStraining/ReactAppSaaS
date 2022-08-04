@@ -45,11 +45,16 @@
     font-family: 'Circular Std';
     background-color: #E1E1E1;
 }
-.log_inner_form button{
+.button-con-ad{
     font-family: 'Circular Std';
     background-color: #319CFF ;
     box-shadow: 0px 4px 40px 0px rgba(49, 156, 255, 0.5);
 
+}
+.button-con-ed{
+    font-family: 'Circular Std';
+    background-color: #32B75F ;
+    box-shadow: 0px 4px 40px rgba(50, 183, 95, 0.73);
 }
 
 .log_logo{
@@ -68,7 +73,16 @@
     background: url(../assets/icons/user.png) no-repeat scroll 27px 13px;
     background-size: 29px;
 }
+.log_login_ed{
+    background: url(../assets/icons/ed_user.png) no-repeat scroll 27px 13px;
+    background-size: 29px;
+}
 .log_mdp{
     background: url(../assets/icons/password.png) no-repeat scroll 27px 13px;
+    background-size: 25px;
+}
+
+.log_mdp_ed{
+    background: url(../assets/icons/ed_mdp.png) no-repeat scroll 27px 13px;
     background-size: 25px;
 }

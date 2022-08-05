@@ -15,7 +15,7 @@ function EditorLogin() {
   const loginAdmin = (e) => {
       e.preventDefault();
       axiosInstance.post(
-          '/admin/login',
+          '/editor/login',
           {
               email,
               password

@@ -15,7 +15,7 @@ function VisitorLogin() {
   const loginAdmin = (e) => {
       e.preventDefault();
       axiosInstance.post(
-          '/admin/login',
+          '/visitor/login',
           {
               email,
               password

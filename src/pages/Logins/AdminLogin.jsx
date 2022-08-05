@@ -14,10 +14,6 @@ function AdminLogin() {
 
   const loginAdmin = (e) => {
       e.preventDefault();
-      toast("Successfully logged in", {
-        type: toast.TYPE.SUCCESS,
-        position: toast.POSITION.BOTTOM_CENTER
-    });
       axiosInstance.post(
           '/admin/login',
           {

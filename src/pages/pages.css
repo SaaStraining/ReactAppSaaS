@@ -71,8 +71,10 @@
 
 .button-con-vi {
     font-family: 'Circular Std';
-    background-color: #B3DAFE;
+    /* background-color: ; */
     box-shadow: 0px 4px 40px 0px #d4e7f8;
+    color:#319CFF;
+    border-color: #d4e7f8;
 }
 
 .log_logo {
@@ -97,14 +99,19 @@
 .log_login_ed {
     background: url(../assets/icons/ed_user.png) no-repeat scroll 27px 13px;
     background-size: 29px;
+    border-color:#32B75F ;
 }
 
 .log_mdp {
     background: url(../assets/icons/password.png) no-repeat scroll 27px 13px;
     background-size: 25px;
+
 }
 
 .log_mdp_ed {
     background: url(../assets/icons/ed_mdp.png) no-repeat scroll 27px 13px;
     background-size: 25px;
+    border-color:#32B75F ;
+
 }
+

@@ -42,7 +42,7 @@ function VisitorLogin() {
               <br />
               <button
                 type="submit"
-                className="text-white mt-8 w-2/5 h-14 text-xl rounded-full   hover:shadow-none"
+                className="button-con-vi text-white mt-8 w-2/5 h-14 text-xl rounded-full   hover:shadow-none"
               >
                 Se connecter
               </button>
@@ -50,7 +50,7 @@ function VisitorLogin() {
           </div>
         </div>
       </div>
-      <div className="login_right w-5/12  "></div>
+      <div className="login_visitor_photo w-5/12  "></div>
     </div>
   );
 }

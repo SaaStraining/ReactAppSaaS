@@ -2,87 +2,109 @@
     font-family: 'Circular Std';
     src: url(../fonts/CIRCULARSTD-MEDIUM.OTF);
 }
-  
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 
- 
+
 
 /*****  login page css  *****/
-.Login-container{
+.Login-container {
     font-family: 'Circular Std';
     /* display: flex; */
     height: 100vh;
 }
-.login_admin_photo{
+
+.login_admin_photo {
     /* flex: 5; */
     background-image: url('../assets/images/login_back.png');
     background-size: cover;
 }
-.login_editor_photo{
+
+.login_editor_photo {
     /* flex: 5; */
     background-image: url('../assets/images/bg-editor.png');
     background-size: cover;
 }
 
-.log_ret{
-    border-color:  #319CFF;
-    color: #319CFF;
-}
-.log_ret_ed{
-    border-color:  #32B75F;
-    color: #32B75F;
-}
- 
-.log_ret:hover{
-    background-color: #319CFF ;
-}
-.log_ret_ed:hover{
-    background-color: #32B75F ;
+.login_visitor_photo {
+    /* flex: 5; */
+    background-image: url('../assets/images/bg_visitor.png');
+    background-size: cover;
 }
 
-.log_inner_form input{
+.log_ret {
+    border-color: #319CFF;
+    color: #319CFF;
+}
+
+.log_ret_ed {
+    border-color: #32B75F;
+    color: #32B75F;
+}
+
+.log_ret:hover {
+    background-color: #319CFF;
+}
+
+.log_ret_ed:hover {
+    background-color: #32B75F;
+}
+
+.log_inner_form input {
     font-family: 'Circular Std';
     background-color: #E1E1E1;
 }
-.button-con-ad{
+
+.button-con-ad {
     font-family: 'Circular Std';
-    background-color: #319CFF ;
+    background-color: #319CFF;
     box-shadow: 0px 4px 40px 0px rgba(49, 156, 255, 0.5);
 
 }
-.button-con-ed{
+
+.button-con-ed {
     font-family: 'Circular Std';
-    background-color: #32B75F ;
+    background-color: #32B75F;
     box-shadow: 0px 4px 40px rgba(50, 183, 95, 0.73);
 }
 
-.log_logo{
-    color:#319CFF;
-}
-.log_logo_ed{
-    color:#32B75F;
+.button-con-vi {
+    font-family: 'Circular Std';
+    background-color: #B3DAFE;
+    box-shadow: 0px 4px 40px #B3DAFE;
 }
 
-::placeholder { 
+.log_logo {
+    color: #319CFF;
+}
+
+.log_logo_ed {
+    color: #32B75F;
+}
+
+::placeholder {
     color: #999999;
-    opacity: 1; 
+    opacity: 1;
     font-family: 'Circular Std';
 }
-.log_login{
+
+.log_login {
     background: url(../assets/icons/user.png) no-repeat scroll 27px 13px;
     background-size: 29px;
 }
-.log_login_ed{
+
+.log_login_ed {
     background: url(../assets/icons/ed_user.png) no-repeat scroll 27px 13px;
     background-size: 29px;
 }
-.log_mdp{
+
+.log_mdp {
     background: url(../assets/icons/password.png) no-repeat scroll 27px 13px;
     background-size: 25px;
 }
 
-.log_mdp_ed{
+.log_mdp_ed {
     background: url(../assets/icons/ed_mdp.png) no-repeat scroll 27px 13px;
     background-size: 25px;
 }

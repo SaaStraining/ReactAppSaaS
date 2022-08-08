@@ -8,7 +8,7 @@ import "./components.css";
 
 function NavBar() {
   return (
-    <div className="NavBar fixed  flex border-b-2  h-16 p-5 w-4/5 bg-white   ">
+    <div className="NavBar fixed  flex border-b-2  h-16 -mr-7 float-right p-5 w-4/5 bg-white ">
       <div className="w-8/12 flex">
         <a href="" className="flex ml-9">
           <img src={Settings} />

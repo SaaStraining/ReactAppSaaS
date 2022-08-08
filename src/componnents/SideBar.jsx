@@ -40,7 +40,7 @@ function SideBar() {
         <div className="side-header w-full grid place-items-center h-16 text-center  m-0 mb-4">
           <h3 className="m-0 text-white font-extrabold">LOGO</h3>
         </div>
-        <div className="w-100 h-auto mb-11 text-white">
+        <div className="w-100 h-auto mb-4 text-white ">
           <div className="flex flex-start pl-4 text-white ">
             <h3 className="">Ressources Humaines </h3>
             {toggle ? (
@@ -64,7 +64,7 @@ function SideBar() {
             {(state) =>
               toggle ? (
                 <div
-                  className="dropmenu flex flex-col text-justify rounded-lg  justify-center w-100 mx-4 mt-2 h-auto mb-11 text-white"
+                  className="dropmenu flex flex-col text-justify rounded-lg  justify-center w-100 mx-4 mt-2 h-auto mb-2 text-white"
                   style={{
                     ...defaultStyle,
                     ...transitionStyles[state],
@@ -86,7 +86,7 @@ function SideBar() {
             }
           </Transition>
         </div>
-        <div className="w-100 h-auto mb-11 text-white">
+        <div className="w-100 h-auto mb-4 text-white">
           <div className="flex flex-start pl-4 text-white ">
             <h3 className="">Produits et Services </h3>
             {toggleSd ? (
@@ -104,7 +104,7 @@ function SideBar() {
             )}
           </div>
           {/* <FontAwesomeIcon icon="fa-solid fa-angle-down" /> */}
-          <div className="dropmenu  flex flex-col text-justify rounded-lg  justify-center w-100 mx-4 mt-2 h-auto mb-11 text-white">
+          <div className="dropmenu  flex flex-col text-justify rounded-lg  justify-center w-100 mx-4 mt-2 h-auto mb-2 text-white">
             <Transition in={toggleSd} timeout={300}>
               {(state) =>
                 toggleSd ? (
@@ -130,7 +130,7 @@ function SideBar() {
             </Transition>
           </div>
         </div>
-        <div className="w-100 h-auto mb-11 text-white">
+        <div className="w-100 h-auto mb-4  text-white">
           <div className="flex flex-start pl-4 text-white ">
             <h3 className="">Statistiques </h3>
             {toggleTd ? (
@@ -148,7 +148,7 @@ function SideBar() {
             )}
           </div>
           {/* <FontAwesomeIcon icon="fa-solid fa-angle-down" /> */}
-          <div className="dropmenu  flex flex-col text-justify rounded-lg  justify-center w-100 mx-4 mt-2 h-auto mb-11 text-white">
+          <div className="dropmenu  flex flex-col text-justify rounded-lg  justify-center w-100 mx-4 mt-2 h-auto mb-2 text-white">
             <Transition in={toggleTd} timeout={300}>
               {(state) =>
                 toggleTd ? (

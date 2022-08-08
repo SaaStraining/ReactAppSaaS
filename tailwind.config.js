@@ -136,6 +136,7 @@ module.exports = {
       input :'#F5F5F5',
       primary : '#00A3FF',
       shadow : '#319CFF',
+      lightgreen : "#8CDED7"
     }
   },
   darkMode: "class",

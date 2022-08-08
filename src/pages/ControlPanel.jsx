@@ -8,7 +8,8 @@ function ControlPanel() {
   return (
     <div className="flex ">
       <SideBar />
-      <div className="block w-4/5 ml-72   ">
+     
+      <div className="block w-4/5 ">
         <NavBar />
         <div className=" text-center mt-20  ">
           <div className="overflow-y-scroll">

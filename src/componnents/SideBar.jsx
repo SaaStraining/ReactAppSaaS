@@ -35,12 +35,12 @@ function SideBar() {
     exited: { opacity: 0 },
   };
   return (
-    <aside className="w-1/5  side-nav h-screen overflow-y-auto pb-4  scrollbar-hide  dark:bg-gray-800 fixed">
+    <aside className="w-1/5  side-nav h-screen overflow-y-auto pb-4  scrollbar-hide  dark:bg-gray-800 ">
       <div className="w-full m-0">
         <div className="side-header w-full grid place-items-center h-16 text-center  m-0 mb-4">
           <h3 className="m-0 text-white font-extrabold">LOGO</h3>
         </div>
-        <div className="w-100 h-auto mb-4 text-white ">
+        <div className="w-full h-auto mb-4 text-white ">
           <div className="flex flex-start pl-4 text-white ">
             <h3 className="">Ressources Humaines </h3>
             {toggle ? (

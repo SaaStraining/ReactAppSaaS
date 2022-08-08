@@ -8,7 +8,7 @@ function ControlPanel() {
   return (
     <div className="flex ">
       <SideBar />
-     
+      
       <div className="block w-4/5 ">
         <NavBar />
         <div className=" text-center mt-20  ">

@@ -11,3 +11,15 @@
 .AddHumanResource{
     font-family: 'Circular Std';
 }
+
+.tab_compte{
+    line-height: 60px;
+}
+.sel_role option{
+    height: 2.5rem;
+    line-height: 100%;
+}
+.sel_role {
+    height: 2.5rem;
+    line-height: 100%;
+}

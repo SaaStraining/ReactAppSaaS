@@ -3,7 +3,7 @@ import { Routes, Route, Outlet } from "react-router-dom";
 import AddHumanResource from "../componnents/HumanRessources/AddHumanResource";
 import NavBar from "../componnents/NavBar";
 import SideBar from "../componnents/SideBar";
-
+ 
 function ControlPanel() {
   return (
     <div className="flex ">

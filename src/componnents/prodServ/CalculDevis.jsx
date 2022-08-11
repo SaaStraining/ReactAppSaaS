@@ -3,7 +3,23 @@ import "../components.css";
 import IllustDevis from "../../assets/illustrations/illustration_devis.png";
 import Stepper from "../Stepper";
 import StepperControl from "../StepperControl";
+import { useState, useEffect } from 'react';
+import { axiosInstance } from "../../AxiosInstance/axios.instance";
+
 function CalculDevis() {
+  
+  const [entreprise, setEntreprise] = useState([]);
+  useEffect(() => {
+    axiosInstance.get('/entreprise/get')
+      .then(res => {
+          setEntreprise(res.data);
+          console.log(res.data);
+      })
+      .catch(err => {
+          console.log(err);
+      });
+  }, []);
+
   return (
     <div className=" block w-full mt-36 ">
       {/* Div decoration */}
@@ -35,14 +51,20 @@ function CalculDevis() {
           <label htmlFor="" className="block h-14  pt-3.5 w-1/5">
             Entreprise :
           </label>
+        
           <select
             name=""
             id=""
             className="pl-5 w-3/5 bg-input border-none h-14 rounded-bl-full rounded-tl-full"
+
           >
-            <option value="">Entreprise 1</option>
-            <option value="">Entreprise 2</option>
-            <option value="">Entreprise 3</option>
+            {
+              entreprise.map( et => {
+                return(
+                  <option value={et.id}>{et.nom}</option>
+                  )
+              })
+            }
           </select>
           <button className="btn-suivant  bg-primary text-white text-center py-3.5 px-5 h-14 items-center rounded-tr-full rounded-br-full w-1/5 inline-flex">
             Suivant

@@ -32,11 +32,11 @@ const AjoutEntreprise = () => {
   };
 
   return (
-    <div className='AjoutEntreprise block pt-10'>
+    <div className=' block pt-7'>
       <div className="w-4/5 font-semibold ">
         <h1 className="-ml-72 underline decoration-primary text-lg"> Ajouter une Entreprise :</h1>
       </div>
-      <div className="m-auto w-4/6 mt-11 ">
+      <div className="AjoutEntreprise m-auto w-4/6 mt-11 ">
       <form action="" onSubmit={addEntr}>
         <div className="tab_compte content-center w-full text-left text-xs mt-7 ">
           <table className="w-full justify-center ">

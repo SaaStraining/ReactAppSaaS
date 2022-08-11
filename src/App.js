@@ -4,19 +4,19 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import HomePage from "./pages/HomePage";
 import ControlPanel from "./pages/ControlPanel";
-import AddHumanResource from "./componnents/HumanRessources/AddHumanResource";
-import ListEmp from "./componnents/HumanRessources/ListEmp";
-import AddCompte from "./componnents/HumanRessources/AddCompte";
+import AddHumanResource from "./components/HumanRessources/AddHumanResource";
+import ListEmp from "./components/HumanRessources/ListEmp";
+import AddCompte from "./components/HumanRessources/AddCompte";
 import NotFound from "./pages/NotFound";
-import RealDevis from "./componnents/prodServ/RealDevis";
-import CalculDevis from "./componnents/prodServ/CalculDevis";
-import HistoriqueDP from "./componnents/prodServ/HistoriqueDP";
-import StatisPage from "./componnents/Statistique/StatisPage";
+import RealDevis from "./components/prodServ/RealDevis";
+import CalculDevis from "./components/prodServ/CalculDevis";
+import HistoriqueDP from "./components/prodServ/HistoriqueDP";
+import StatisPage from "./components/Statistique/StatisPage";
 import AdminLogin from "./pages/Logins/AdminLogin";
 import EditorLogin from "./pages/Logins/EditorLogin";
 import VisitorLogin from "./pages/Logins/VisitorLogin";
-import ListeEntreprise from "./componnents/Entreprise/ListeEntreprise";
-import AjoutEntreprise from "./componnents/Entreprise/AjoutEntreprise";
+import ListeEntreprise from "./components/Entreprise/ListeEntreprise";
+import AjoutEntreprise from "./components/Entreprise/AjoutEntreprise";
 
 function App() {
   return (

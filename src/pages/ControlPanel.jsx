@@ -1,8 +1,8 @@
 import React from "react";
 import { Routes, Route, Outlet } from "react-router-dom";
-import AddHumanResource from "../componnents/HumanRessources/AddHumanResource";
-import NavBar from "../componnents/NavBar";
-import SideBar from "../componnents/SideBar";
+import AddHumanResource from "../components/HumanRessources/AddHumanResource";
+import NavBar from "../components/NavBar";
+import SideBar from "../components/SideBar";
  
 function ControlPanel() {
   return (

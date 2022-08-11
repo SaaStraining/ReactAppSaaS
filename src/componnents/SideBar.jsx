@@ -10,6 +10,7 @@ function SideBar() {
   const [toggle, setToggle] = useState(false);
   const [toggleSd, setToggleSd] = useState(false);
   const [toggleTd, setToggleTd] = useState(false);
+  const [toggleFh, setToggleFh] = useState(false);
   const ShowFst = (e) => {
     e.preventDefault();
     setToggle(!toggle);
@@ -21,6 +22,10 @@ function SideBar() {
   const ShowTh = (e) => {
     e.preventDefault();
     setToggleTd(!toggleTd);
+  };
+  const ShowFh = (e) => {
+    e.preventDefault();
+    setToggleFh(!toggleFh);
   };
   const duration = 300;
   const defaultStyle = {
@@ -130,6 +135,49 @@ function SideBar() {
             </Transition>
           </div>
         </div>
+        <div className="w-full h-auto mb-4 text-white ">
+          <div className="flex flex-start pl-4 text-white ">
+            <h3 className="">Entreprise </h3>
+            {toggleFh ? (
+              <FontAwesomeIcon
+                icon={faAngleUp}
+                className=" mt-1 text-white ml-3 "
+                onClick={ShowFh}
+              />
+            ) : (
+              <FontAwesomeIcon
+                icon={faAngleDown}
+                className=" mt-1 text-white ml-3 "
+                onClick={ShowFh}
+              />
+            )}
+          </div>
+          {/* <FontAwesomeIcon icon="fa-solid fa-angle-down" /> */}
+
+          {/* chanfge it just to see if it will be better  than the old version transition */}
+          <Transition in={toggleFh} timeout={500} unmountOnExit>
+            {(state) =>
+              toggleFh ? (
+                <div
+                  className="dropmenu flex flex-col text-justify rounded-lg  justify-center w-100 mx-4 mt-2 h-auto mb-2 text-white"
+                  style={{
+                    ...defaultStyle,
+                    ...transitionStyles[state],
+                  }}
+                >
+                  <div className="flex pl-9 flex-col dropdown-links py-2">
+                    <Link to="entreprises" className="block  w-5/6 mb-1">
+                      Liste des Entreprises
+                    </Link>
+                    <Link to="ajouter-entreprise" className="block  w-5/6 mb-1">
+                      Ajout Entreprises
+                    </Link>
+                  </div>
+                </div>
+              ) : null
+            }
+          </Transition>
+        </div>
         <div className="w-100 h-auto mb-4  text-white">
           <div className="flex flex-start pl-4 text-white ">
             <h3 className="">Statistiques </h3>
@@ -168,6 +216,8 @@ function SideBar() {
             </Transition>
           </div>
         </div>
+
+        
       </div>
     </aside>
   );

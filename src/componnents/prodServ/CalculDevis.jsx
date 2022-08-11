@@ -5,7 +5,7 @@ import Stepper from "../Stepper";
 import StepperControl from "../StepperControl";
 function CalculDevis() {
   return (
-    <div className=" block w-full ">
+    <div className=" block w-full mt-36 ">
       {/* Div decoration */}
       <div className="bg-lightgreen w-4/5 h-56 rounded-2xl flex m-auto mt-8 ">
         <div className="block pt-6 pl-16 pr-8 w-7/12 text-left">
@@ -38,13 +38,13 @@ function CalculDevis() {
           <select
             name=""
             id=""
-            className="pl-5 w-3/5 bg-input border-none h-14 rounded-bl-lg rounded-tl-lg"
+            className="pl-5 w-3/5 bg-input border-none h-14 rounded-bl-full rounded-tl-full"
           >
             <option value="">Entreprise 1</option>
             <option value="">Entreprise 2</option>
             <option value="">Entreprise 3</option>
           </select>
-          <button className="btn-suivant  bg-primary text-white text-center py-3.5 px-5 h-14 items-center rounded-tr-3xl rounded-br-3xl w-1/5 inline-flex">
+          <button className="btn-suivant  bg-primary text-white text-center py-3.5 px-5 h-14 items-center rounded-tr-full rounded-br-full w-1/5 inline-flex">
             Suivant
             <svg
               width="9"

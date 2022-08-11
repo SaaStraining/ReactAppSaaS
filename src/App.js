@@ -15,6 +15,8 @@ import StatisPage from "./componnents/Statistique/StatisPage";
 import AdminLogin from "./pages/Logins/AdminLogin";
 import EditorLogin from "./pages/Logins/EditorLogin";
 import VisitorLogin from "./pages/Logins/VisitorLogin";
+import ListeEntreprise from "./componnents/Entreprise/ListeEntreprise";
+import AjoutEntreprise from "./componnents/Entreprise/AjoutEntreprise";
 
 function App() {
   return (
@@ -33,6 +35,8 @@ function App() {
             <Route path="calcul-devis" element={<CalculDevis/>} />
             <Route path="devis-reel" element={<RealDevis />} />
             <Route path="statis" element={<StatisPage />} />
+            <Route path="entreprises" element={<ListeEntreprise/>} />
+            <Route path="ajouter-entreprise" element={<AjoutEntreprise />} />
           </Route>
           <Route path="*" element={<NotFound/>}/>
         </Routes>

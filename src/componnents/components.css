@@ -12,8 +12,22 @@
     font-family: 'Circular Std';
 }
 
+
 .btn-suivant{
-    background:url(../assets/illustrations/right_arrow.png) no-repeat right 27px 13px;
+    background: url(../assets/illustrations/right_arrow.png) no-repeat right 27px 13px;
     background-size: 25px;
     
 }
+
+.tab_compte{
+    line-height: 60px;
+}
+.sel_role option{
+    height: 2.5rem;
+    line-height: 100%;
+}
+.sel_role {
+    height: 2.5rem;
+    line-height: 100%;
+}
+

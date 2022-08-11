@@ -8,13 +8,13 @@ function ControlPanel() {
   return (
     <div className="flex ">
       <SideBar />
-      
+
       <div className="block w-4/5 ">
         <NavBar />
-        <div className=" text-center mt-20  ">
-          <div className="overflow-y-scroll">
+        <div className=" text-center mt-20  w-full ">
+         
             <Outlet />
-          </div>
+      
         </div>
       </div>
     </div>

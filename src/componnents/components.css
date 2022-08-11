@@ -11,3 +11,9 @@
 .AddHumanResource{
     font-family: 'Circular Std';
 }
+
+.btn-suivant{
+    background:url(../assets/illustrations/right_arrow.png) no-repeat right 27px 13px;
+    background-size: 25px;
+    
+}

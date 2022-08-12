@@ -6,6 +6,9 @@ import Update from '../../assets/icons/update.png'
 import Delete from '../../assets/icons/delete.png'
 import { useState, useEffect } from "react";
 import { axiosInstance } from "../../AxiosInstance/axios.instance";
+import { ToastContainer, toast } from 'react-toastify';
+import axios from 'axios';
+
 
 const ListeEntreprise = () => {
 
@@ -81,7 +84,23 @@ const ListeEntreprise = () => {
                       <td className='align-middle	 text-white'>
                         <div className='flex'>
                         <button className='update w-24  h-8 text-center bg-update p-0 align-middle items-center justify-center content-center text-xs flex mr-3 ml-3 rounded-lg'>Modifier &nbsp;&nbsp; <img src={Update} alt="" /></button>
-                        <button className='delete bg-delete w-8 h-8 p-0 align-middle items-center justify-center content-center text-center rounded-lg flex'><img src={Delete} width="16px" alt=""/></button>
+                        <button 
+                          className='delete bg-delete w-8 h-8 p-0 align-middle items-center justify-center content-center text-center rounded-lg flex'
+                          onClick={(e) => {
+                            axiosInstance.
+                                delete('/entreprise/delete/' + ets.id).
+                                then(res => {
+                                  setEntreprise(entreprise.filter(d => d.id !== ets.id))
+                                  toast("Entreprise supprimé avec succes", {
+                                    type: toast.TYPE.WARNING,
+                                    position: toast.POSITION.BOTTOM_CENTER
+                                  }
+                                  );
+                                })
+                          }}
+                        >
+                            <img src={Delete} width="16px" alt=""/>
+                        </button>
                         </div>
                       </td>
                     </tr>

@@ -35,7 +35,7 @@ function AdminLogin() {
         console.log(res.data)
       })
           .catch(error => {
-              toast("Invalid credentials", {
+              toast("Probleme au serveur", {
                   type: toast.TYPE.ERROR,
                   position: toast.POSITION.BOTTOM_CENTER
               });

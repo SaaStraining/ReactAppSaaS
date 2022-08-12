@@ -23,9 +23,9 @@ const ListeEntreprise = () => {
             </Link>
           </div>
         </div><br />
-        <div className='tab_ents h-96 mt-7 rounded-2xl'>
-          <table className='w-full rounded-2xl inset-x-0 top-0'>
-            <thead className='rounded-2xl'>
+        <div className='tab_ents max-h-96 mt-7 rounded-2xl overflow-scroll'>
+          <table className='w-full rounded-2xl  inset-x-0 top-0 overflow-scroll'>
+            <thead className='rounded-2xl sticky top-0 w-3/4'>
               <tr>
                 <td>Id</td>
                 <td>ICE</td>
@@ -37,7 +37,97 @@ const ListeEntreprise = () => {
                 <td>Actions</td>
               </tr>
             </thead>
-            <tbody className=''>
+            <tbody className='h-96  scrollbar-hide '>
+              <tr>
+                <td>Id</td>
+                <td>ICE</td>
+                <td>Nom</td>
+                <td>Email</td>
+                <td>Tel Fix</td>
+                <td>Ville</td>
+                <td><img src={Preview} alt="" className='cursor-pointer' width="40px" /></td>
+                <td>Actions</td>
+              </tr>
+              <tr>
+                <td>Id</td>
+                <td>ICE</td>
+                <td>Nom</td>
+                <td>Email</td>
+                <td>Tel Fix</td>
+                <td>Ville</td>
+                <td><img src={Preview} alt="" className='cursor-pointer' width="40px" /></td>
+                <td>Actions</td>
+              </tr>
+              <tr>
+                <td>Id</td>
+                <td>ICE</td>
+                <td>Nom</td>
+                <td>Email</td>
+                <td>Tel Fix</td>
+                <td>Ville</td>
+                <td><img src={Preview} alt="" className='cursor-pointer' width="40px" /></td>
+                <td>Actions</td>
+              </tr>
+              <tr>
+                <td>Id</td>
+                <td>ICE</td>
+                <td>Nom</td>
+                <td>Email</td>
+                <td>Tel Fix</td>
+                <td>Ville</td>
+                <td><img src={Preview} alt="" className='cursor-pointer' width="40px" /></td>
+                <td>Actions</td>
+              </tr>
+              <tr>
+                <td>Id</td>
+                <td>ICE</td>
+                <td>Nom</td>
+                <td>Email</td>
+                <td>Tel Fix</td>
+                <td>Ville</td>
+                <td><img src={Preview} alt="" className='cursor-pointer' width="40px" /></td>
+                <td>Actions</td>
+              </tr>
+              <tr>
+                <td>Id</td>
+                <td>ICE</td>
+                <td>Nom</td>
+                <td>Email</td>
+                <td>Tel Fix</td>
+                <td>Ville</td>
+                <td><img src={Preview} alt="" className='cursor-pointer' width="40px" /></td>
+                <td>Actions</td>
+              </tr>
+              <tr>
+                <td>Id</td>
+                <td>ICE</td>
+                <td>Nom</td>
+                <td>Email</td>
+                <td>Tel Fix</td>
+                <td>Ville</td>
+                <td><img src={Preview} alt="" className='cursor-pointer' width="40px" /></td>
+                <td>Actions</td>
+              </tr>
+              <tr>
+                <td>Id</td>
+                <td>ICE</td>
+                <td>Nom</td>
+                <td>Email</td>
+                <td>Tel Fix</td>
+                <td>Ville</td>
+                <td><img src={Preview} alt="" className='cursor-pointer' width="40px" /></td>
+                <td>Actions</td>
+              </tr>
+              <tr>
+                <td>Id</td>
+                <td>ICE</td>
+                <td>Nom</td>
+                <td>Email</td>
+                <td>Tel Fix</td>
+                <td>Ville</td>
+                <td><img src={Preview} alt="" className='cursor-pointer' width="40px" /></td>
+                <td>Actions</td>
+              </tr>
               <tr>
                 <td>Id</td>
                 <td>ICE</td>

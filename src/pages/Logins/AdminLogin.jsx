@@ -21,13 +21,18 @@ function AdminLogin() {
               password
           }
       ).then(res => {
-        
+        if(res.data.message){
+          toast("Invalid credentials", {
+            type: toast.TYPE.ERROR,
+            position: toast.POSITION.BOTTOM_CENTER
+        });
+        }else{
           toast("Login avec succes", {
-              type: toast.TYPE.SUCCESS,
-              position: toast.POSITION.BOTTOM_CENTER
-          });
-
-          console.log(res.data)
+            type: toast.TYPE.SUCCESS,
+            position: toast.POSITION.BOTTOM_CENTER
+        });
+        }
+        console.log(res.data)
       })
           .catch(error => {
               toast("Invalid credentials", {

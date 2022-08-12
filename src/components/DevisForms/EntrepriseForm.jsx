@@ -1,8 +1,8 @@
 
 import React from 'react'
-import IllustDevis from "../assets/illustrations/illustration_devis.png";
+import IllustDevis from "../../assets/illustrations/illustration_devis.png";
 import { useState, useEffect } from "react";
-import { axiosInstance } from "../AxiosInstance/axios.instance";
+import { axiosInstance } from "../../AxiosInstance/axios.instance";
 function EntrepriseForm() {
  
   // const changeEntreHandler = (e) => {

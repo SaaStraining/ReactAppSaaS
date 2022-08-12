@@ -2,6 +2,8 @@ import React from 'react'
 import "../components.css";
 import { Link } from "react-router-dom";
 import Preview from '../../assets/icons/preview.png'
+import Update from '../../assets/icons/update.png'
+import Delete from '../../assets/icons/delete.png'
 import { useState, useEffect } from "react";
 import { axiosInstance } from "../../AxiosInstance/axios.instance";
 
@@ -42,9 +44,9 @@ const ListeEntreprise = () => {
           </div>
           
         </div><br />
-        <div className='tab_ents h-96 mt-7 rounded-2xl'>
-          <table className='w-full rounded-2xl inset-x-0 top-0'>
-            <thead className='rounded-2xl'>
+        <div className='tab_ents h-96 mt-7 rounded-2xl overflow-x-hidden scrollbar-hide '>
+          <table className='w-full rounded-2xl inset-x-0 top-0 h-96 border-b align-middle'>
+            <thead className='rounded-2xl sticky top-0'>
               <tr>
                 <td>Id</td>
                 <td>ICE</td>
@@ -56,7 +58,7 @@ const ListeEntreprise = () => {
                 <td>Actions</td>
               </tr>
             </thead>
-            <tbody className=''>
+            <tbody className='h-96  align-middle	'>
               {
                 entreprise.filter(val=>{
                 if(searchTerm === ''){
@@ -67,11 +69,24 @@ const ListeEntreprise = () => {
                     return val;
                 }
                 }).map(ets => {
-                    return (
-                        <tr>
-                            <td>E00{ets.id}</td>
-                        </tr>
-                    )
+                  return (
+                    <tr className='border-b text-sm'>
+                      <td className=''>E00{ets.id}</td>
+                      <td>{ets.ice}</td>
+                      <td>{ets.nom}</td>
+                      <td>{ets.mail}</td>
+                      <td>{ets.fix}</td>
+                      <td>{ets.ville}</td>
+                      <td className='align-middle	'><button><img src={Preview} width="35px" className='' alt="" /></button></td>
+                      <td className='align-middle	 text-white'>
+                        <div className='flex'>
+                        <button className='update w-24  h-8 text-center bg-update p-0 align-middle items-center justify-center content-center text-xs flex mr-3 ml-3 rounded-lg'>Modifier &nbsp;&nbsp; <img src={Update} alt="" /></button>
+                        <button className='delete bg-delete w-8 h-8 p-0 align-middle items-center justify-center content-center text-center rounded-lg flex'><img src={Delete} width="16px" alt=""/></button>
+                        </div>
+                      </td>
+                    </tr>
+                    
+                  )
                 })
               }
            

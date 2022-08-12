@@ -139,7 +139,9 @@ module.exports = {
       shadow : '#319CFF',
       lightgreen : "#8CDED7",
       inputsec:"#D2EDFD",
-      blueprim:"#00A3FF"
+      blueprim:"#00A3FF",
+      update:"#09C878",
+      delete:"#FF1D1D"
     }
   },
   darkMode: "class",

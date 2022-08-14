@@ -9,7 +9,6 @@ import ListEmp from "./components/HumanRessources/ListEmp";
 import AddCompte from "./components/HumanRessources/AddCompte";
 import NotFound from "./pages/NotFound";
 import RealDevis from "./components/prodServ/RealDevis";
-import CalculDevis from "./components/prodServ/CalculDevis";
 import HistoriqueDP from "./components/prodServ/HistoriqueDP";
 import StatisPage from "./components/Statistique/StatisPage";
 import AdminLogin from "./pages/Logins/AdminLogin";
@@ -17,6 +16,7 @@ import EditorLogin from "./pages/Logins/EditorLogin";
 import VisitorLogin from "./pages/Logins/VisitorLogin";
 import ListeEntreprise from "./components/Entreprise/ListeEntreprise";
 import AjoutEntreprise from "./components/Entreprise/AjoutEntreprise";
+import CalculDevis from "./components/prodServ/CalculDevis";
 
 function App() {
   return (

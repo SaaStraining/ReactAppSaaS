@@ -1,9 +1,24 @@
-import React from 'react'
+import React from "react";
 
-function ProduitForm() {
+const ProduitForm = ({prevStep, nextStep, handleChange, values}) => {
+  const Continue = (e) => {
+    e.preventDefault();
+    nextStep();
+  }
+  const Previous = (e) => {
+    e.preventDefault();
+    prevStep();
+  }
   return (
-    <div>ProduitForm</div>
-  )
-}
+    <div>
+      
+      <form action="">
+        <input type="text" placeholder="hello 3" />
+        <button onClick={Previous}>Retour</button>
+        <button onClick={Continue}>Suivant</button>
+      </form>
+    </div>
+  );
+};
 
-export default ProduitForm
+export default ProduitForm;

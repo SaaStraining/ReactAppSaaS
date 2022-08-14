@@ -3,24 +3,30 @@ import React from 'react'
 import IllustDevis from "../../assets/illustrations/illustration_devis.png";
 import { useState, useEffect } from "react";
 import { axiosInstance } from "../../AxiosInstance/axios.instance";
-function EntrepriseForm() {
+const  EntrepriseForm = ({nextStep, handleChange, values})=> {
  
   // const changeEntreHandler = (e) => {
   //   e.preventDefault();
   //   localStorage.setItem("entreprise", JSON.stringify(e.target.value));
   //   console.log(localStorage.getItem("entreprise"));
   // };
+
+    const Continue = (e) => {
+      e.preventDefault();
+      nextStep();
+    }
+
   const [entreprise, setEntreprise] = useState([]);
-  useEffect(() => {
-    axiosInstance.get('/entreprise/get')
-      .then(res => {
-          setEntreprise(res.data);
-          console.log(res.data);
-      })
-      .catch(err => {
-          console.log(err);
-      });
-  }, []);
+  // useEffect(() => {
+  //   axiosInstance.get('/entreprise/get')
+  //     .then(res => {
+  //         setEntreprise(res.data);
+  //         console.log(res.data);
+  //     })
+  //     .catch(err => {
+  //         console.log(err);
+  //     });
+  // }, []);
   return (
     <div className=" block w-full mt-36 ">
     {/* Div decoration */}
@@ -67,7 +73,7 @@ function EntrepriseForm() {
             })
           }
         </select>
-        <button className="btn-suivant  bg-primary text-white text-center py-3.5 px-5 h-14 items-center rounded-tr-full rounded-br-full w-1/5 inline-flex">
+        <button onClick={ Continue} className="btn-suivant  bg-primary text-white text-center py-3.5 px-5 h-14 items-center rounded-tr-full rounded-br-full w-1/5 inline-flex">
           Suivant
           <svg
             width="9"

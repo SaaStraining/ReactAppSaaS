@@ -48,23 +48,22 @@ const  EntrepriseForm = ({nextStep, handleChange, values})=> {
     <form action="" className=" w-2/3 mx-auto mt-12 ">
       <div className="text-sm text-justify text-gray-500 ">
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus,
-          omnis rerum nulla soluta, odit autem, sequi dolor voluptate magnam
-          ipsa quibusdam porro sed! Saepe iusto officiis libero sed asperiores
-          aperiam.
+         Information Devis
         </p>
       </div>
       <div className="flex justify-end mt-14 w-full">
-        <label htmlFor="" className="block h-14  pt-3.5 w-1/5">
-          Entreprise :
-        </label>
+        
+        <input type="text"  className='inline-block pl-5 w-3/5 text-gray-500 focus:outline-none border-r-gray-400 bg-input border-l-0 border-y-0 h-14 rounded-bl-full rounded-tl-full border-r' placeholder='Libelle'/>
+        <input type="number"className='inline-block pl-5 w-3/5 text-gray-500 focus:outline-none border-r-gray-400 bg-input border-y-0 border-l-0  h-14 border-r' placeholder='Numero'  />
+        <input type="date"  className='inline-block pl-5 w-3/5 text-gray-500 focus:outline-none border-r-gray-400 bg-input  border-y-0 border-l-0 h-14 border-r' placeholder='h'/>
       
         <select
           name=""
           id=""
-          className="pl-5 w-3/5 bg-input border-none h-14 rounded-bl-full rounded-tl-full"
-
+          className="pl-5 w-3/5 bg-input border-none h-14 text-gray-400"
+          placeholder='Entreprise'
         >
+          <option value=""> Entreprise</option>
           {
             entreprise.map( et => {
               return(

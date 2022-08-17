@@ -77,3 +77,9 @@ thead td:first-child {
   table td {
     border: none !important;
   }
+  
+  .log_mdp {
+    background: url(../assets/icons/password.png) no-repeat scroll 27px 13px;
+    background-size: 25px;
+
+}

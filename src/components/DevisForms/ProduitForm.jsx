@@ -1,27 +1,34 @@
-import React from "react";
+
+import React,{Component} from "react";
 import AddIcon from "../../assets/icons/addicon.png";
 import deleteIcon from "../../assets/icons/deleteicon.png";
-const ProduitForm = ({ prevStep, nextStep, handleChange, values }) => {
-  const Continue = (e) => {
+
+class ProduitForm extends Component {
+  prevStep = this.props.prevStep;
+  nextStep = this.props.nextStep;
+  values = this.props.values;
+  handleChange = this.props.handleChange;
+   Continue = (e) => {
     e.preventDefault();
-    nextStep();
+    this.props.nextStep();
   };
-  const Previous = (e) => {
+   Previous = (e) => {
     e.preventDefault();
-    prevStep();
+    this.props.prevStep();
   };
 
-  const deleteRow = e =>{
+   deleteRow = e =>{
     e.preventDefault();
     console.log("deleted")
   }
-  const addRow = e =>{
+   addRow = e =>{
     e.preventDefault();
     console.log("added")
   }
-  return (
-    <div className="w-full">
-      <div className="w-5/6 mx-auto  mt-24 mb-14">
+  render() {
+    return (
+      <div className="w-full">
+      <div className="w-5/6 mx-auto  mt-24 mb-7 ">
         <form action="" className="flex mx-auto justify-around">
           <div className="w-56 mr-1 ">
             <label htmlFor="" className="block text-md font-light mb-4 float-left  ">
@@ -76,15 +83,15 @@ const ProduitForm = ({ prevStep, nextStep, handleChange, values }) => {
             />
           </div>
           <div className="mr-1">
-            <button type="submit" onClick={addRow} className="  mt-11 ">
+            <button type="submit" onClick={this.addRow} className="  mt-11 ">
               <img src={AddIcon} alt="" className="" />
             </button>
           </div>
         </form>
       </div>
-      <div className="w-5/6 mx-auto mb-14 h-3/5 border">
-        <table className=" table-auto border-spacing-2 w-full h-full">
-          <thead>
+      <div className=" leading-10 w-5/6 mx-auto h-96 mt-5  overflow-x-hidden   ">
+        <table className=" w-full rounded-2xl inset-x-0 top-0 h-96 border-b align-middle">
+          <thead className=" bg-white sticky top-0">
           <tr>
             <th>id</th>
             <th>Libelle</th>
@@ -96,7 +103,7 @@ const ProduitForm = ({ prevStep, nextStep, handleChange, values }) => {
             <th>Action</th>
           </tr>
           </thead>
-          <tbody>
+          <tbody className="h-80 align-middle">
             <tr>
               <td>ahah</td>
               <td>ahah</td>
@@ -105,19 +112,114 @@ const ProduitForm = ({ prevStep, nextStep, handleChange, values }) => {
               <td>ahah</td>
               <td>ahah</td>
               <td>ahah</td>
-              <td><button onClick={deleteRow}><img src={deleteIcon} alt="" /></button></td>
+              <td><button onClick={this.deleteRow}><img src={deleteIcon} alt="" /></button></td>
+            </tr>
+            <tr>
+              <td>ahah</td>
+              <td>ahah</td>
+              <td>ahah</td>
+              <td>ahah</td>
+              <td>ahah</td>
+              <td>ahah</td>
+              <td>ahah</td>
+              <td><button onClick={this.deleteRow}><img src={deleteIcon} alt="" /></button></td>
+            </tr>
+            <tr>
+              <td>ahah</td>
+              <td>ahah</td>
+              <td>ahah</td>
+              <td>ahah</td>
+              <td>ahah</td>
+              <td>ahah</td>
+              <td>ahah</td>
+              <td><button onClick={this.deleteRow}><img src={deleteIcon} alt="" /></button></td>
+            </tr>
+            <tr>
+              <td>ahah</td>
+              <td>ahah</td>
+              <td>ahah</td>
+              <td>ahah</td>
+              <td>ahah</td>
+              <td>ahah</td>
+              <td>ahah</td>
+              <td><button onClick={this.deleteRow}><img src={deleteIcon} alt="" /></button></td>
+            </tr>
+            <tr>
+              <td>ahah</td>
+              <td>ahah</td>
+              <td>ahah</td>
+              <td>ahah</td>
+              <td>ahah</td>
+              <td>ahah</td>
+              <td>ahah</td>
+              <td><button onClick={this.deleteRow}><img src={deleteIcon} alt="" /></button></td>
+            </tr>
+            <tr>
+              <td>ahah</td>
+              <td>ahah</td>
+              <td>ahah</td>
+              <td>ahah</td>
+              <td>ahah</td>
+              <td>ahah</td>
+              <td>ahah</td>
+              <td><button onClick={this.deleteRow}><img src={deleteIcon} alt="" /></button></td>
+            </tr>
+            <tr>
+              <td>ahah</td>
+              <td>ahah</td>
+              <td>ahah</td>
+              <td>ahah</td>
+              <td>ahah</td>
+              <td>ahah</td>
+              <td>ahah</td>
+              <td><button onClick={this.deleteRow}><img src={deleteIcon} alt="" /></button></td>
+            </tr>
+            <tr>
+              <td>ahah</td>
+              <td>ahah</td>
+              <td>ahah</td>
+              <td>ahah</td>
+              <td>ahah</td>
+              <td>ahah</td>
+              <td>ahah</td>
+              <td><button onClick={this.deleteRow}><img src={deleteIcon} alt="" /></button></td>
+            </tr>
+            <tr>
+              <td>ahah</td>
+              <td>ahah</td>
+              <td>ahah</td>
+              <td>ahah</td>
+              <td>ahah</td>
+              <td>ahah</td>
+              <td>ahah</td>
+              <td><button onClick={this.deleteRow}><img src={deleteIcon} alt="" /></button></td>
+            </tr>
+            <tr>
+              <td>ahah</td>
+              <td>ahah</td>
+              <td>ahah</td>
+              <td>ahah</td>
+              <td>ahah</td>
+              <td>ahah</td>
+              <td>ahah</td>
+              <td><button onClick={this.deleteRow}><img src={deleteIcon} alt="" /></button></td>
             </tr>
           </tbody>
         </table>
       </div>
 
-      <div className=" w-full">calculated:</div>
-      <div>
-        <button onClick={Previous}>Retour</button>
-        <button onClick={Continue}>Suivant</button>
+      <div className=" w-5/6 border mt-10 mb-10 mx-auto ">
+        <p className=" block text-sm float-left">Total Ht produit (prévus): </p><br />
+        <p className="block text-sm float-left ">Total des marges (prévus): </p>
+      </div>
+      <br />
+      <div className="w-5/6 mx-auto">
+        <button onClick={this.Previous} className="float-left   w-36 rounded-md px-3 py-2 bg-gray-500 text-white">Retour</button>
+        <button onClick={this.Continue} className="float-right  w-36 rounded-md px-3 py-2 bg-primary  text-white ">Suivant</button>
       </div>
     </div>
-  );
-};
+    )
+  }
+}
 
 export default ProduitForm;

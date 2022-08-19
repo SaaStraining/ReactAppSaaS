@@ -30,7 +30,7 @@ function AddCompte() {
 
   return (
     <div className='block'>
-      <div className="bg-second w-4/5 h-56 rounded-2xl flex m-auto mt-8 ">
+      <div className="bg-turkoy w-4/5 h-56 rounded-2xl flex m-auto mt-8 ">
         <div className="block pt-6 pl-16 pr-8 w-7/12 text-left">
           <h1 className="font-bold mb-3 mt-5 ml-2">Ajout des Comptes</h1>
           <p className="text-sm font-light">

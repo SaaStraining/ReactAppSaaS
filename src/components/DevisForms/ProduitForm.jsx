@@ -4,10 +4,7 @@ import AddIcon from "../../assets/icons/addicon.png";
 import deleteIcon from "../../assets/icons/deleteicon.png";
 
 class ProduitForm extends Component {
-  prevStep = this.props.prevStep;
-  nextStep = this.props.nextStep;
-  values = this.props.values;
-  handleChange = this.props.handleChange;
+
    Continue = (e) => {
     e.preventDefault();
     this.props.nextStep();
@@ -208,9 +205,9 @@ class ProduitForm extends Component {
         </table>
       </div>
 
-      <div className=" w-5/6 border mt-10 mb-10 mx-auto ">
-        <p className=" block text-sm float-left">Total Ht produit (prévus): </p><br />
-        <p className="block text-sm float-left ">Total des marges (prévus): </p>
+      <div className=" w-5/6 border flex flex-col  items-start justify-between  mt-10 mb-10 mx-auto ">
+        <p className=" block text-sm mb-2 float-left">Total Ht produit (prévus): <span className="ml-4">{ 90454 + 12443497}</span> </p>
+        <p className="block text-sm float-left ">Total des marges (prévus): <span className="ml-4">{200999 + 123838}</span> </p>
       </div>
       <br />
       <div className="w-5/6 mx-auto">

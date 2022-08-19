@@ -63,7 +63,7 @@ export default class ListEmp extends Component {
           <br />
           <div className="tab_ents h-96 mt-7 rounded-2xl overflow-x-hidden scrollbar-hide w-full">
             <table className="w-full  rounded-2xl inset-x-0 top-0 h-96 border-b align-middle">
-              <thead className="rounded-2xl sticky top-0">
+              <thead className="rounded-2xl sticky h-16 top-0">
                 <tr>
                   <td>Id</td>
                   <td>CIN</td>
@@ -73,10 +73,7 @@ export default class ListEmp extends Component {
                   <td>Email</td>
                   <td>Tel</td>
                   <td>Adresse</td>
-                  <td>Sb</td>
-                  <td>Cs</td>
-                  <td>Sn</td>
-                  {/* we can use just one salary net or brut */}
+                  <td>Salaire net</td>
                   <td>Preview</td>
                   <td>Actions</td>
                 </tr>
@@ -96,7 +93,7 @@ export default class ListEmp extends Component {
                   })
                   .map((emps) => {
                     return (
-                      <tr className="border-b text-sm">
+                      <tr className="border-b text-xs ">
                         <td className="">E00{emps.id}</td>
                         <td>{emps.cin}</td>
                         <td>{emps.statut}</td>
@@ -105,8 +102,7 @@ export default class ListEmp extends Component {
                         <td>{emps.mail}</td>
                         <td>{emps.tel}</td>
                         <td>{emps.addresse}</td>
-                        <td>{emps.sb}</td>
-                        <td>{emps.cs}</td>
+                      
                         <td>{emps.sn}</td>
                         <td className="align-middle	">
                           <button>

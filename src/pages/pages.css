@@ -116,3 +116,28 @@
 }
 
 
+.fin{
+    background-image: url(../assets/illustrations/illustration_finance.png)  ;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+.rh{
+    background-image: url(../assets/illustrations/illustration_rh.png)  ;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+.prod{
+    background-image: url(../assets/illustrations/Product_illustration.png)  ;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+.dev{
+    background-image: url(../assets/illustrations/illustration_devis.png)  ;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+  
+}

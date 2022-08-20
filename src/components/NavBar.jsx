@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Settings from "../assets/icons/settings.png";
 import User from "../assets/icons/user_nav.png";
 import Notification from "../assets/icons/notification.png";
@@ -23,9 +24,8 @@ function NavBar() {
         <a href="" className="flex ml-3">
           <img src={Notification} />
         </a>
-        <a href="" className="flex ml-3">
-          <img src={Mail} />
-        </a>
+        <Link to="mailbox" className="flex ml-3"><img src={Mail} /></Link>
+    
         <a href="" className="flex ml-16">
           <img src={Logout} />
           <p className="ml-2">Déconnexion</p>

@@ -45,7 +45,7 @@ export default class ListEmp extends Component {
               <input
                 type="text"
                 className="inp_search bg-inputsec border-none rounded-md h-11 w-72"
-                placeholder="Nom/Raison social ..."
+                placeholder="Nom..."
                 name="search-entreprise"
                 onChange={(e) => {
                   this.setState({ employes: e.target.value });

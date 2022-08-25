@@ -5,11 +5,11 @@ import { useState, useEffect } from "react";
 import { axiosInstance } from "../../AxiosInstance/axios.instance";
 const  EntrepriseForm = ({nextStep, handleChange, values})=> {
  
-  // const changeEntreHandler = (e) => {
-  //   e.preventDefault();
-  //   localStorage.setItem("entreprise", JSON.stringify(e.target.value));
-  //   console.log(localStorage.getItem("entreprise"));
-  // };
+  const changeEntreHandler = (e) => {
+    e.preventDefault();
+    localStorage.setItem("entreprise", JSON.stringify(e.target.value));
+    console.log(localStorage.getItem("entreprise"));
+  };
 
     const Continue = (e) => {
       e.preventDefault();
@@ -17,16 +17,16 @@ const  EntrepriseForm = ({nextStep, handleChange, values})=> {
     }
 
   const [entreprise, setEntreprise] = useState([]);
-  // useEffect(() => {
-  //   axiosInstance.get('/entreprise/get')
-  //     .then(res => {
-  //         setEntreprise(res.data);
-  //         console.log(res.data);
-  //     })
-  //     .catch(err => {
-  //         console.log(err);
-  //     });
-  // }, []);
+  useEffect(() => {
+    axiosInstance.get('/entreprise/get')
+      .then(res => {
+          setEntreprise(res.data);
+          console.log(res.data);
+      })
+      .catch(err => {
+          console.log(err);
+      });
+  }, []);
   return (
     <div className=" block w-full mt-36 ">
     {/* Div decoration */}
@@ -63,7 +63,7 @@ const  EntrepriseForm = ({nextStep, handleChange, values})=> {
           className="pl-5 w-3/5 bg-input border-none h-14 text-gray-400"
           placeholder='Entreprise'
         >
-          <option value=""> Entreprise</option>
+        
           {
             entreprise.map( et => {
               return(

@@ -18,6 +18,7 @@ import ListeEntreprise from "./components/Entreprise/ListeEntreprise";
 import AjoutEntreprise from "./components/Entreprise/AjoutEntreprise";
 import CalculDevis from "./components/prodServ/CalculDevis";
 import MailBox from "./pages/MailBox";
+import ProduitForm from "./components/DevisForms/ProduitForm";
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
             <Route path="entreprises" element={<ListeEntreprise/>} />
             <Route path="ajouter-entreprise" element={<AjoutEntreprise />} />
             <Route path="mailbox" element={<MailBox/>}/>
+            <Route path="produits" element={<ProduitForm/>}/>
           </Route>
          
           <Route path="*" element={<NotFound/>}/>

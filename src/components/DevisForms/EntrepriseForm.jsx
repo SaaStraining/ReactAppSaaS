@@ -9,14 +9,12 @@ const  EntrepriseForm = ({nextStep, handleChange, values})=> {
       .then(res => {
           setEntreprise(res.data);
           console.log(res.data);
-          setTimeout(() => {
-            window.location.href = "/";
-          }, 1000); 
       })
       .catch(err => {
           console.log(err);
       });
   }, []);
+  
   const [data, setData] = useState({
     libelle: "",
     num: "",
@@ -32,11 +30,16 @@ const  EntrepriseForm = ({nextStep, handleChange, values})=> {
 
   const initDevis = (e) => {
     e.preventDefault();
-    axiosInstance.post("/devis/add", data).catch((e) => {
-      console.log(e);
-      console.log("back error")
-    });
-    console.log(data);
+    axiosInstance.post("/devis/add", data).then(
+      res => {
+        console.log("top")
+        console.log(res.data.id_devis)
+        console.log("bott")
+        localStorage.setItem("id_devis", JSON.stringify(res.data.id_devis));
+
+        nextStep()
+      });
+     
   };
  
   const changeEntreHandler = (e) => {

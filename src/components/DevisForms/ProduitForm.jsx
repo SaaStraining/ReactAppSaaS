@@ -3,38 +3,66 @@ import React,{Component} from "react";
 import AddIcon from "../../assets/icons/addicon.png";
 import deleteIcon from "../../assets/icons/deleteicon.png";
 import { useState, useEffect } from "react";
+import { axiosInstance } from "../../AxiosInstance/axios.instance";
+import { ToastContainer, toast } from 'react-toastify';
 
 const ProduitForm = ({nextStep, handleChange, values}) => {
-  
-  const [data, setData] = useState({
-    libelle: "",
-    nombre: "",
-    unite: "",
-    prix_unite: "",
-    prix_total_unite: "",
-    marge: "",
-    prix_marge: "",
-    prix_total_unite_marge: "",
-    id_devis: "",
-  });
-  
-  const handleDataChange = (event) => {
-    event.preventDefault();
-    const { name, value } = event.target;
-    setData({ ...data, [name]: value });
-  };
+
+  const [libelle, setLibelle] = useState("");
+  const [nombre, setNombre] = useState("");
+  const [unite, setUnite] = useState("");
+  const [prix_unite, setPrixUnite] = useState("");
+  const [prix_total_unite, setPrixTotalUnite] = useState("");
+  const [marge, setMarge] = useState("");
+  const [prix_marge, setPrixMarge] = useState("");
+  const [prix_total_unite_marge, setPrixTotalUniteMarge] = useState("");
+  const [id_devis, setIdDevis] = useState("");
+
+
+
+  const addProduct = (e) => {
+    e.preventDefault();
+    console.log("marge"+marge)
+    setPrixTotalUnite(prix_unite*nombre)
+    setPrixMarge(prix_unite*marge/100)
+    setPrixTotalUniteMarge(prix_total_unite+(prix_marge*nombre))
+    setIdDevis(localStorage.getItem("id_devis"))
+    console.log("prix_total_unite :")
+    console.log(prix_total_unite)
+    // axiosInstance.post(
+    //   '/produit/add',
+    //   {
+    //     libelle,
+    //     nombre,
+    //     unite,
+    //     prix_unite,
+    //     prix_total_unite,
+    //     marge,
+    //     prix_marge,
+    //     prix_total_unite_marge,
+    //     id_devis,
+    //   }
+    // ).then(res => {
+    //     toast("Produit bien ajouté", {
+    //         type: toast.TYPE.SUCCESS,
+    //         position: toast.POSITION.BOTTOM_CENTER
+    //     });
+    // })
+  }
 
   return (
     <div className="w-full">
     <div className="w-5/6 mx-auto  mt-24 mb-7 ">
-      <form action="" className="flex mx-auto justify-around">
+      <form action="" onSubmit={addProduct} className="flex mx-auto justify-around">
         <div className="w-56 mr-1 ">
           <label htmlFor="" className="block text-md font-light mb-4 float-left  ">
             Libelle:
           </label>
           <input
+            name="libelle"
             type="text"
             className=" w-full h-10 rounded-md border-gray-300"
+            value={libelle} onChange={(e) => setLibelle(e.target.value)}
           />
         </div>
         <div className="w-32 mr-1">
@@ -44,6 +72,8 @@ const ProduitForm = ({nextStep, handleChange, values}) => {
           <input
             type="number"
             className="w-full h-10  rounded-md border-gray-300 "
+            name="nombre"
+            value={nombre} onChange={(e) => setNombre(e.target.value)}
           />
         </div>
         <div className="w-24 mr-1">
@@ -51,14 +81,15 @@ const ProduitForm = ({nextStep, handleChange, values}) => {
             Unite:
           </label>
           <select
-            name=""
             id=""
             className="w-full h-10 rounded-md border-gray-300"
+            name="unite"
+            value={unite} onChange={(e) => setUnite(e.target.value)}
           >
             <option value="kg" className="  text-center mr-2">Kg</option>
             <option value="Cm" className="  text-center mr-2">Cm</option>
             <option value="unite" className=" text-center mr-2">Unite</option>
-            <option value="unite" className=" text-center mr-2">m</option>
+            <option value="m" className=" text-center mr-2">m</option>
             
           </select>
         </div>
@@ -69,6 +100,8 @@ const ProduitForm = ({nextStep, handleChange, values}) => {
           <input
             type="number"
             className="w-full h-10 rounded-md border-gray-300"
+            name="prix_unite"
+            value={prix_unite} onChange={(e) => setPrixUnite(e.target.value)}
           />
         </div>
         <div className="w-48 mr-1">
@@ -78,10 +111,12 @@ const ProduitForm = ({nextStep, handleChange, values}) => {
           <input
             type="number"
             className="w-full h-10 rounded-md border-gray-300"
+            name="marge"
+            value={marge} onChange={(e) => setMarge(e.target.value)}
           />
         </div>
         <div className="mr-1">
-          <button type="submit" onClick={this.addRow} className="  mt-11 ">
+          <button type="submit"  className="  mt-11 ">
             <img src={AddIcon} alt="" className="" />
           </button>
         </div>
@@ -110,7 +145,7 @@ const ProduitForm = ({nextStep, handleChange, values}) => {
             <td>ahah</td>
             <td>ahah</td>
             <td>ahah</td>
-            <td><button onClick={this.deleteRow}><img src={deleteIcon} alt="" /></button></td>
+            <td><button ><img src={deleteIcon} alt="" /></button></td>
           </tr>
           <tr>
             <td>ahah</td>
@@ -120,7 +155,7 @@ const ProduitForm = ({nextStep, handleChange, values}) => {
             <td>ahah</td>
             <td>ahah</td>
             <td>ahah</td>
-            <td><button onClick={this.deleteRow}><img src={deleteIcon} alt="" /></button></td>
+            <td><button><img src={deleteIcon} alt="" /></button></td>
           </tr>
           <tr>
             <td>ahah</td>
@@ -130,7 +165,7 @@ const ProduitForm = ({nextStep, handleChange, values}) => {
             <td>ahah</td>
             <td>ahah</td>
             <td>ahah</td>
-            <td><button onClick={this.deleteRow}><img src={deleteIcon} alt="" /></button></td>
+            <td><button ><img src={deleteIcon} alt="" /></button></td>
           </tr>
           <tr>
             <td>ahah</td>
@@ -140,7 +175,7 @@ const ProduitForm = ({nextStep, handleChange, values}) => {
             <td>ahah</td>
             <td>ahah</td>
             <td>ahah</td>
-            <td><button onClick={this.deleteRow}><img src={deleteIcon} alt="" /></button></td>
+            <td><button><img src={deleteIcon} alt="" /></button></td>
           </tr>
           <tr>
             <td>ahah</td>
@@ -150,7 +185,7 @@ const ProduitForm = ({nextStep, handleChange, values}) => {
             <td>ahah</td>
             <td>ahah</td>
             <td>ahah</td>
-            <td><button onClick={this.deleteRow}><img src={deleteIcon} alt="" /></button></td>
+            <td><button ><img src={deleteIcon} alt="" /></button></td>
           </tr>
           <tr>
             <td>ahah</td>
@@ -160,7 +195,7 @@ const ProduitForm = ({nextStep, handleChange, values}) => {
             <td>ahah</td>
             <td>ahah</td>
             <td>ahah</td>
-            <td><button onClick={this.deleteRow}><img src={deleteIcon} alt="" /></button></td>
+            <td><button ><img src={deleteIcon} alt="" /></button></td>
           </tr>
           <tr>
             <td>ahah</td>
@@ -170,7 +205,7 @@ const ProduitForm = ({nextStep, handleChange, values}) => {
             <td>ahah</td>
             <td>ahah</td>
             <td>ahah</td>
-            <td><button onClick={this.deleteRow}><img src={deleteIcon} alt="" /></button></td>
+            <td><button ><img src={deleteIcon} alt="" /></button></td>
           </tr>
           <tr>
             <td>ahah</td>
@@ -180,7 +215,7 @@ const ProduitForm = ({nextStep, handleChange, values}) => {
             <td>ahah</td>
             <td>ahah</td>
             <td>ahah</td>
-            <td><button onClick={this.deleteRow}><img src={deleteIcon} alt="" /></button></td>
+            <td><button ><img src={deleteIcon} alt="" /></button></td>
           </tr>
           <tr>
             <td>ahah</td>
@@ -190,7 +225,7 @@ const ProduitForm = ({nextStep, handleChange, values}) => {
             <td>ahah</td>
             <td>ahah</td>
             <td>ahah</td>
-            <td><button onClick={this.deleteRow}><img src={deleteIcon} alt="" /></button></td>
+            <td><button ><img src={deleteIcon} alt="" /></button></td>
           </tr>
           <tr>
             <td>ahah</td>
@@ -200,7 +235,7 @@ const ProduitForm = ({nextStep, handleChange, values}) => {
             <td>ahah</td>
             <td>ahah</td>
             <td>ahah</td>
-            <td><button onClick={this.deleteRow}><img src={deleteIcon} alt="" /></button></td>
+            <td><button ><img src={deleteIcon} alt="" /></button></td>
           </tr>
         </tbody>
       </table>
@@ -212,8 +247,8 @@ const ProduitForm = ({nextStep, handleChange, values}) => {
     </div>
     <br />
     <div className="w-5/6 mx-auto">
-      <button onClick={this.Previous} className="float-left   w-36 rounded-md px-3 py-2 bg-gray-500 text-white">Retour</button>
-      <button onClick={this.Continue} className="float-right  w-36 rounded-md px-3 py-2 bg-primary  text-white ">Suivant</button>
+      <button className="float-left   w-36 rounded-md px-3 py-2 bg-gray-500 text-white">Retour</button>
+      <button className="float-right  w-36 rounded-md px-3 py-2 bg-primary  text-white ">Suivant</button>
     </div>
   </div>
   )

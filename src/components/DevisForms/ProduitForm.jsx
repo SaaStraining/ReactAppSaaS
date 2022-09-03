@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import { axiosInstance } from "../../AxiosInstance/axios.instance";
 import { ToastContainer, toast } from 'react-toastify';
 
-const ProduitForm = ({nextStep, handleChange, values}) => {
+const ProduitForm = ({nextStep, prevStep, handleChange, values}) => {
 
   const [libelle, setLibelle] = useState("");
   const [nombre, setNombre] = useState("");
@@ -18,7 +18,10 @@ const ProduitForm = ({nextStep, handleChange, values}) => {
   const [prix_total_unite_marge, setPrixTotalUniteMarge] = useState("");
   const [id_devis, setIdDevis] = useState("");
 
-
+  const Previous = (e) => {
+    e.preventDefault();
+    this.props.prevStep();
+  };
 
   const addProduct = (e) => {
     e.preventDefault();
@@ -247,7 +250,7 @@ const ProduitForm = ({nextStep, handleChange, values}) => {
     </div>
     <br />
     <div className="w-5/6 mx-auto">
-      <button className="float-left   w-36 rounded-md px-3 py-2 bg-gray-500 text-white">Retour</button>
+      <button className="float-left   w-36 rounded-md px-3 py-2 bg-gray-500 text-white" onClick={Previous}>Retour</button>
       <button className="float-right  w-36 rounded-md px-3 py-2 bg-primary  text-white ">Suivant</button>
     </div>
   </div>

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Transition } from "react-transition-group";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 // import { Dropdown,Flowbite, DarkThemeToggle } from 'flowbite-react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleUp, faAngleDown } from "@fortawesome/free-solid-svg-icons";
@@ -11,6 +11,8 @@ function SideBar() {
   const [toggleSd, setToggleSd] = useState(false);
   const [toggleTd, setToggleTd] = useState(false);
   const [toggleFh, setToggleFh] = useState(false);
+  const activeLink = " bg-red-500  pl-9 dropdown-links py-2 block";
+  const normalLink = " pl-9 dropdown-links py-2 block";
   const ShowFst = (e) => {
     e.preventDefault();
     setToggle(!toggle);
@@ -45,7 +47,7 @@ function SideBar() {
         <div className="side-header w-full grid place-items-center h-16 text-center  m-0 mb-4">
           <h3 className="m-0 text-white font-extrabold">LOGO</h3>
         </div>
-        <div className="w-full h-auto mb-4 text-white ">
+        <div className="w-full h-auto mb-4 text-white  ">
           <div className="flex flex-start pl-4 text-white ">
             <h3 className="">Ressources Humaines </h3>
             {toggle ? (
@@ -69,23 +71,26 @@ function SideBar() {
             {(state) =>
               toggle ? (
                 <div
-                  className="dropmenu flex flex-col text-justify rounded-lg  justify-center w-100 mx-4 mt-2 h-auto mb-2 text-white"
+                  className=" bg-navbar flex flex-col text-justify rounded-lg   justify-center w-100  mt-2 h-auto mb-2 text-white"
                   style={{
                     ...defaultStyle,
                     ...transitionStyles[state],
                   }}
                 >
-                  <div className="flex pl-9 flex-col dropdown-links py-2">
-                    <Link to="emps" className="block  w-2/3 mb-1">
+                  
+                    <NavLink to="emps" className={({ isActive }) => (isActive ? activeLink : normalLink)}>
                       Liste des Employés
-                    </Link>
-                    <Link to="ajouter-emp" className="block  w-2/3 mb-1">
+                    </NavLink>
+        
+                    <NavLink to="ajouter-emp" className={({ isActive }) => (isActive ? activeLink : normalLink)}>
                       Ajouter Employé
-                    </Link>
-                    <Link to="ajouter-cmpt" className="block  w-2/3 mb-1">
+                    </NavLink>
+               
+               
+                    <NavLink to="ajouter-cmpt" className={({ isActive }) => (isActive ? activeLink : normalLink)}>
                       Ajouter Compte
-                    </Link>
-                  </div>
+                    </NavLink>
+                  
                 </div>
               ) : null
             }
@@ -109,31 +114,31 @@ function SideBar() {
             )}
           </div>
           {/* <FontAwesomeIcon icon="fa-solid fa-angle-down" /> */}
-          <div className="dropmenu  flex flex-col text-justify rounded-lg  justify-center w-100 mx-4 mt-2 h-auto mb-2 text-white">
+          
             <Transition in={toggleSd} timeout={300}>
               {(state) =>
                 toggleSd ? (
                   <div
-                    className="flex pl-9 flex-col dropdown-links py-2"
+                    className="  flex flex-col text-justify rounded-lg  justify-center w-100  mt-2 h-auto mb-2 text-white"
                     style={{
                       ...defaultStyle,
                       ...transitionStyles[state],
                     }}
                   >
-                    <Link to="old-dp" className="block  w-5/6 mb-1">
+                    <NavLink to="old-dp" className={({ isActive }) => (isActive ? activeLink : normalLink)}>
                       Historique Devis / Projet
-                    </Link>
-                    <Link to="calcul-devis" className="block  w-5/6 mb-1">
+                    </NavLink>
+                    <NavLink to="calcul-devis" className={({ isActive }) => (isActive ? activeLink : normalLink)}>
                       Calcul Devis / Projet
-                    </Link>
-                    <Link to="devis-reel" className="block  w-5/6 mb-1">
+                    </NavLink>
+                    <NavLink to="devis-reel" className={({ isActive }) => (isActive ? activeLink : normalLink)}>
                       Devis Réel par projet
-                    </Link>
+                    </NavLink>
                   </div>
                 ) : null
               }
             </Transition>
-          </div>
+          
         </div>
         <div className="w-full h-auto mb-4 text-white ">
           <div className="flex flex-start pl-4 text-white ">
@@ -159,20 +164,23 @@ function SideBar() {
             {(state) =>
               toggleFh ? (
                 <div
-                  className="dropmenu flex flex-col text-justify rounded-lg  justify-center w-100 mx-4 mt-2 h-auto mb-2 text-white"
+                  className="  flex flex-col text-justify rounded-lg  justify-center w-100  mt-2 h-auto mb-2 text-white"
                   style={{
                     ...defaultStyle,
                     ...transitionStyles[state],
                   }}
                 >
-                  <div className="flex pl-9 flex-col dropdown-links py-2">
-                    <Link to="entreprises" className="block  w-5/6 mb-1">
+                  
+                    <NavLink to="entreprises" className={({ isActive }) => (isActive ? activeLink : normalLink)}>
                       Liste des Entreprises
-                    </Link>
-                    <Link to="ajouter-entreprise" className="block  w-5/6 mb-1">
+                    </NavLink>
+                    <NavLink
+                      to="ajouter-entreprise"
+                      className={({ isActive }) => (isActive ? activeLink : normalLink)}
+                    >
                       Ajout Entreprises
-                    </Link>
-                  </div>
+                    </NavLink>
+                  
                 </div>
               ) : null
             }
@@ -196,28 +204,24 @@ function SideBar() {
             )}
           </div>
           {/* <FontAwesomeIcon icon="fa-solid fa-angle-down" /> */}
-          <div className="dropmenu  flex flex-col text-justify rounded-lg  justify-center w-100 mx-4 mt-2 h-auto mb-2 text-white">
             <Transition in={toggleTd} timeout={300}>
               {(state) =>
                 toggleTd ? (
                   <div
-                    className="flex pl-9 flex-col dropdown-links py-2"
+                    className="   flex flex-col text-justify  justify-center w-100  mt-2 h-auto mb-2 text-white"
                     style={{
                       ...defaultStyle,
                       ...transitionStyles[state],
                     }}
                   >
-                    <Link to="statis" className="block  w-5/6 mb-1">
+                    <NavLink to="statis" className={({ isActive }) => (isActive ? activeLink : normalLink)}>
                       Achat et ventes Ex
-                    </Link>
+                    </NavLink>
                   </div>
                 ) : null
               }
             </Transition>
           </div>
-        </div>
-
-        
       </div>
     </aside>
   );

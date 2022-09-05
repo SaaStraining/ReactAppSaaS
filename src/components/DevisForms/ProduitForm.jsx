@@ -27,30 +27,36 @@ const ProduitForm = ({nextStep, prevStep, handleChange, values}) => {
     e.preventDefault();
     console.log("marge"+marge)
     setPrixTotalUnite(prix_unite*nombre)
+    var ptu = prix_unite*nombre
+    var marge_u = prix_unite*marge/100
+    var ptum = (prix_unite+(prix_unite*marge/100)) * nombre
+    console.log("ptu :  "+ptu)
+    console.log("marge_u :  "+marge_u)
+    console.log("ptum :  "+ptum)
     setPrixMarge(prix_unite*marge/100)
     setPrixTotalUniteMarge(prix_total_unite+(prix_marge*nombre))
     setIdDevis(localStorage.getItem("id_devis"))
     console.log("prix_total_unite :")
     console.log(prix_total_unite)
-    // axiosInstance.post(
-    //   '/produit/add',
-    //   {
-    //     libelle,
-    //     nombre,
-    //     unite,
-    //     prix_unite,
-    //     prix_total_unite,
-    //     marge,
-    //     prix_marge,
-    //     prix_total_unite_marge,
-    //     id_devis,
-    //   }
-    // ).then(res => {
-    //     toast("Produit bien ajouté", {
-    //         type: toast.TYPE.SUCCESS,
-    //         position: toast.POSITION.BOTTOM_CENTER
-    //     });
-    // })
+    axiosInstance.post(
+      '/produit/add',
+      {
+        libelle,
+        nombre,
+        unite,
+        prix_unite,
+        "prix_total_unite" : ptu,
+        marge,
+        "prix_marge" : marge_u,
+        "prix_total_unite_marge" : ptum,
+        id_devis,
+      }
+    ).then(res => {
+        toast("Produit bien ajouté", {
+            type: toast.TYPE.SUCCESS,
+            position: toast.POSITION.BOTTOM_CENTER
+        });
+    })
   }
 
   return (

@@ -15,17 +15,17 @@ function NavBar() {
           <img src={Settings} />
           <p className="ml-2">Paramétres</p>
         </a>
-        <a href="" className="flex ml-9">
-          <img src={User} />
-          <p className="ml-2">Compte</p>
-        </a>
+        <Link to="compte" className="flex ml-3">
+          <img src={User} /> <p className="ml-2">Compte</p>
+        </Link>
+
+      
       </div>
       <div className="flex w-4/12 ml-52">
         <a href="" className="flex ml-3">
           <img src={Notification} />
         </a>
-        <Link to="mailbox" className="flex ml-3"><img src={Mail} /></Link>
-    
+
         <a href="" className="flex ml-16">
           <img src={Logout} />
           <p className="ml-2">Déconnexion</p>

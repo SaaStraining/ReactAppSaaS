@@ -17,7 +17,7 @@ import VisitorLogin from "./pages/Logins/VisitorLogin";
 import ListeEntreprise from "./components/Entreprise/ListeEntreprise";
 import AjoutEntreprise from "./components/Entreprise/AjoutEntreprise";
 import CalculDevis from "./components/prodServ/CalculDevis";
-import MailBox from "./pages/MailBox";
+import Account from "./pages/Account";
 import ProduitForm from "./components/DevisForms/ProduitForm";
 
 function App() {
@@ -39,10 +39,9 @@ function App() {
             <Route path="statis" element={<StatisPage />} />
             <Route path="entreprises" element={<ListeEntreprise/>} />
             <Route path="ajouter-entreprise" element={<AjoutEntreprise />} />
-            <Route path="mailbox" element={<MailBox/>}/>
+            <Route path="compte" element={<Account/>}/>
             <Route path="produits" element={<ProduitForm/>}/>
           </Route>
-         
           <Route path="*" element={<NotFound/>}/>
         </Routes>
       </Router>
@@ -53,10 +52,5 @@ function App() {
 export default App;
 
 {
-  /* <Login/>
-<SideBar/>
-<div className='block w-4/5'>
-  <NavBar/>
-  <AddHumanResource/>
-</div> */
+
 }

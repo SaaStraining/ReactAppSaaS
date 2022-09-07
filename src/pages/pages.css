@@ -6,7 +6,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 
-
+.ft-circular {
+    font-family: 'Circular Std';
+}
 
 /*****  login page css  *****/
 .Login-container {
@@ -73,7 +75,7 @@
     font-family: 'Circular Std';
     /* background-color: ; */
     box-shadow: 0px 4px 40px 0px #d4e7f8;
-    color:#319CFF;
+    color: #319CFF;
     border-color: #d4e7f8;
 }
 
@@ -99,7 +101,7 @@
 .log_login_ed {
     background: url(../assets/icons/ed_user.png) no-repeat scroll 27px 13px;
     background-size: 29px;
-    border-color:#32B75F ;
+    border-color: #32B75F;
 }
 
 .log_mdp {
@@ -111,33 +113,36 @@
 .log_mdp_ed {
     background: url(../assets/icons/ed_mdp.png) no-repeat scroll 27px 13px;
     background-size: 25px;
-    border-color:#32B75F ;
+    border-color: #32B75F;
 
 }
 
 
-.fin{
-    background-image: url(../assets/illustrations/illustration_finance.png)  ;
+.fin {
+    background-image: url(../assets/illustrations/illustration_finance.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right bottom;
 }
-.rh{
-    background-image: url(../assets/illustrations/illustration_rh.png)  ;
+
+.rh {
+    background-image: url(../assets/illustrations/illustration_rh.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right bottom;
 }
-.prod{
-    background-image: url(../assets/illustrations/Product_illustration.png)  ;
+
+.prod {
+    background-image: url(../assets/illustrations/Product_illustration.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right bottom;
 }
-.dev{
-    background-image: url(../assets/illustrations/illustration_devis.png)  ;
+
+.dev {
+    background-image: url(../assets/illustrations/illustration_devis.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right bottom;
-  
+
 }

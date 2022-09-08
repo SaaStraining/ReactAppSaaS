@@ -29,7 +29,9 @@ const ProduitForm = ({nextStep, prevStep, handleChange, values}) => {
     setPrixTotalUnite(prix_unite*nombre)
     var ptu = prix_unite*nombre
     var marge_u = prix_unite*marge/100
-    var ptum = (prix_unite+(prix_unite*marge/100)) * nombre
+    var ptum = ptu + (marge_u * nombre)
+    var ptumarge = (prix_unite+(prix_unite*marge/100)) * nombre
+    var iddvs = localStorage.getItem("id_devis")
     console.log("ptu :  "+ptu)
     console.log("marge_u :  "+marge_u)
     console.log("ptum :  "+ptum)
@@ -49,7 +51,7 @@ const ProduitForm = ({nextStep, prevStep, handleChange, values}) => {
         marge,
         "prix_marge" : marge_u,
         "prix_total_unite_marge" : ptum,
-        id_devis,
+        "id_devis": iddvs,
       }
     ).then(res => {
         toast("Produit bien ajouté", {
@@ -146,86 +148,6 @@ const ProduitForm = ({nextStep, prevStep, handleChange, values}) => {
         </tr>
         </thead>
         <tbody className="h-80 align-middle">
-          <tr>
-            <td>ahah</td>
-            <td>ahah</td>
-            <td>ahah</td>
-            <td>ahah</td>
-            <td>ahah</td>
-            <td>ahah</td>
-            <td>ahah</td>
-            <td><button ><img src={deleteIcon} alt="" /></button></td>
-          </tr>
-          <tr>
-            <td>ahah</td>
-            <td>ahah</td>
-            <td>ahah</td>
-            <td>ahah</td>
-            <td>ahah</td>
-            <td>ahah</td>
-            <td>ahah</td>
-            <td><button><img src={deleteIcon} alt="" /></button></td>
-          </tr>
-          <tr>
-            <td>ahah</td>
-            <td>ahah</td>
-            <td>ahah</td>
-            <td>ahah</td>
-            <td>ahah</td>
-            <td>ahah</td>
-            <td>ahah</td>
-            <td><button ><img src={deleteIcon} alt="" /></button></td>
-          </tr>
-          <tr>
-            <td>ahah</td>
-            <td>ahah</td>
-            <td>ahah</td>
-            <td>ahah</td>
-            <td>ahah</td>
-            <td>ahah</td>
-            <td>ahah</td>
-            <td><button><img src={deleteIcon} alt="" /></button></td>
-          </tr>
-          <tr>
-            <td>ahah</td>
-            <td>ahah</td>
-            <td>ahah</td>
-            <td>ahah</td>
-            <td>ahah</td>
-            <td>ahah</td>
-            <td>ahah</td>
-            <td><button ><img src={deleteIcon} alt="" /></button></td>
-          </tr>
-          <tr>
-            <td>ahah</td>
-            <td>ahah</td>
-            <td>ahah</td>
-            <td>ahah</td>
-            <td>ahah</td>
-            <td>ahah</td>
-            <td>ahah</td>
-            <td><button ><img src={deleteIcon} alt="" /></button></td>
-          </tr>
-          <tr>
-            <td>ahah</td>
-            <td>ahah</td>
-            <td>ahah</td>
-            <td>ahah</td>
-            <td>ahah</td>
-            <td>ahah</td>
-            <td>ahah</td>
-            <td><button ><img src={deleteIcon} alt="" /></button></td>
-          </tr>
-          <tr>
-            <td>ahah</td>
-            <td>ahah</td>
-            <td>ahah</td>
-            <td>ahah</td>
-            <td>ahah</td>
-            <td>ahah</td>
-            <td>ahah</td>
-            <td><button ><img src={deleteIcon} alt="" /></button></td>
-          </tr>
           <tr>
             <td>ahah</td>
             <td>ahah</td>

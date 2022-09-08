@@ -19,6 +19,7 @@ import AjoutEntreprise from "./components/Entreprise/AjoutEntreprise";
 import CalculDevis from "./components/prodServ/CalculDevis";
 import Account from "./pages/Account";
 import ProduitForm from "./components/DevisForms/ProduitForm";
+import Document from "./components/DevisForms/Document"
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route path="/admin" element={<AdminLogin/>} />
           <Route path="/editor" element={<EditorLogin/>} />
           <Route path="/visitor" element={<VisitorLogin/>} />
+          <Route path="/document" element={<Document />}/>
           <Route path="/dashboard" element={<ControlPanel />}>
             <Route path="emps" element={<ListEmp />} />
             <Route path="ajouter-emp" element={<AddHumanResource />} />

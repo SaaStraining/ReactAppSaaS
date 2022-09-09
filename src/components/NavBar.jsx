@@ -14,7 +14,7 @@ const customStyles = {
     width: "400px",
     background: "#F7F7F7",
     color: "#101115",
-    top: "34%",
+    top: "36%",
     left: "auto",
     right: "5%",
     bottom: "auto",
@@ -68,7 +68,7 @@ function NavBar() {
         onAfterOpen={afterOpenModal}
         onRequestClose={closeModal}
         contentLabel="Example Modal"
-        style={Object.assign(customStyles, { overlay: { background: 'transparent' } })}
+        style={Object.assign(customStyles, { overlay: { background: 'transparent  ' } })}
         
         >
         {/* Modal Header */}
@@ -79,7 +79,7 @@ function NavBar() {
           </button>
         </div>
         {/* Modal Body */}
-        <div className=" h-64 overflow-scroll">
+        <div className=" h-64 overflow-y-auto">
           <div className=" border-b  grid grid-cols-4 h-16">
             <div className="   p-0  w-2/3 mx-auto my-auto align-middle text-center text-white rounded-lg bg-gray-500">
               old

@@ -1,10 +1,7 @@
 import React from "react";
 
 const Confirmation = ({ prevStep, nextStep, values }) => {
-  const Continue = (e) => {
-    e.preventDefault();
-    nextStep();
-  };
+ 
   const Previous = (e) => {
     e.preventDefault();
     prevStep();
@@ -83,15 +80,10 @@ const Confirmation = ({ prevStep, nextStep, values }) => {
         >
           Retour
         </button>
+        
         <button
           className="w-36 px-3 py-2 text-white mr-4 border-primary bg-primary"
-          onClick={Continue}
-        >
-          Suivant
-        </button>
-        <button
-          className="w-36 px-3 py-2 text-white mr-4 border-primary bg-primary"
-          onClick={Continue}
+         
         >
           Imprimer
         </button>

@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import { axiosInstance } from "../../AxiosInstance/axios.instance";
 import { ToastContainer, toast } from 'react-toastify';
 import { PDFDownloadLink } from "@react-pdf/renderer";
-import Document from './Document'
+import DevisDoc from './DevisDoc'
 import { PDFViewer } from "@react-pdf/renderer";
 
 const ServiceForm = ({nextStep, prevStep, handleChange, values}) => {
@@ -187,11 +187,11 @@ const ServiceForm = ({nextStep, prevStep, handleChange, values}) => {
       <button className="w-36 rounded-md px-3 py-2 bg-white text-gray-700" onClick={Previous}>Retour</button>
       <button className="w-36 rounded-md px-3 py-2 bg-primary text-white " onClick={Next}>Suivant</button>
     </div>
-    <PDFDownloadLink document={<Document />} fileName='Devis'>
+    <PDFDownloadLink document={<DevisDoc />} fileName='Devis'>
       {({loading}) => loading ? (<button>Loading devis file</button>):(<button>download</button>)}
     </PDFDownloadLink>
     <PDFViewer>
-      <Document />
+      <DevisDoc />
     </PDFViewer>
     
   </div>

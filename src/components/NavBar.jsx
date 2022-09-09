@@ -5,29 +5,28 @@ import User from "../assets/icons/user_nav.png";
 import Notification from "../assets/icons/notification.png";
 import Mail from "../assets/icons/mail_open.png";
 import Logout from "../assets/icons/log_out.png";
+import close from "../assets/icons/closse.png";
 import "./components.css";
-import Modal from 'react-modal';
+import Modal from "react-modal";
 
 const customStyles = {
   content: {
-    width:'400px',
-    background : '#F7F7F7',
-    color : '#101115',
-    top: '24%',
-    left: 'auto',
-    right: '5%',
-    bottom: 'auto',
-    marginRight: '-10%',
-    transform: 'translate(-50%, -50%)',
-    borderRadius: '10px',
-    padding:'40px',
-
+    width: "400px",
+    background: "#F7F7F7",
+    color: "#101115",
+    top: "34%",
+    left: "auto",
+    right: "5%",
+    bottom: "auto",
+    marginRight: "-10%",
+    transform: "translate(-50%, -50%)",
+    borderRadius: "10px",
+    padding: "40px",
+    
   },
-  
 };
 
 function NavBar() {
-
   let subtitle;
   const [modalIsOpen, setIsOpen] = React.useState(false);
 
@@ -37,7 +36,7 @@ function NavBar() {
 
   function afterOpenModal() {
     // references are now sync'd and can be accessed.
-    subtitle.style.color = '#f00';
+    subtitle.style.color = "#f00";
   }
 
   function closeModal() {
@@ -54,8 +53,6 @@ function NavBar() {
         <Link to="compte" className="flex ml-3">
           <img src={User} /> <p className="ml-2">Compte</p>
         </Link>
-
-      
       </div>
       <div className="flex w-4/12 ml-52">
         <button className="flex ml-3" onClick={openModal}>
@@ -74,16 +71,71 @@ function NavBar() {
         style={customStyles}
         contentLabel="Example Modal"
       >
-        <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Hello</h2>
-        <button onClick={closeModal}>close</button>
-        <div>I am a modal</div>
-        <form>
-          <input />
-          <button>tab navigation</button>
-          <button>stays</button>
-          <button>inside</button>
-          <button>the modal</button>
-        </form>
+        {/* Modal Header */}
+        <div className=" flex justify-between mb-4 ">
+          <p>Notification</p>
+          <button onClick={closeModal}>
+            <img src={close} alt="" />
+          </button>
+        </div>
+        {/* Modal Body */}
+        <div className=" h-64 overflow-scroll">
+          <div className=" border-b  grid grid-cols-4 h-16">
+            <div className="   p-0  w-2/3 mx-auto my-auto align-middle text-center text-white rounded-lg bg-gray-500">
+              old
+            </div>
+            <div className="col-span-3 py-2   text-left">
+              <p className="text-sm">zebdaoui a fini tout les gateaux</p>
+              <p className="text-xs text-gray-500">2 days ago</p>
+            </div>
+          </div>
+          <div className=" border-b  grid grid-cols-4 h-16">
+            <div className="   p-0  w-2/3 mx-auto my-auto align-middle text-center text-white rounded-lg bg-gray-500">
+              old
+            </div>
+            <div className="col-span-3 py-2   text-left">
+              <p className="text-sm">zebdaoui a fini tout les gateaux</p>
+              <p className="text-xs text-gray-500">2 days ago</p>
+            </div>
+          </div>
+          <div className=" border-b  grid grid-cols-4 h-16">
+            <div className="   p-0  w-2/3 mx-auto my-auto align-middle text-center text-white rounded-lg bg-gray-500">
+              old
+            </div>
+            <div className="col-span-3 py-2   text-left">
+              <p className="text-sm">zebdaoui a fini tout les gateaux</p>
+              <p className="text-xs text-gray-500">2 days ago</p>
+            </div>
+          </div>
+          <div className=" border-b  grid grid-cols-4 h-16">
+            <div className="   p-0  w-2/3 mx-auto my-auto align-middle text-center text-white rounded-lg bg-gray-500">
+              old
+            </div>
+            <div className="col-span-3 py-2   text-left">
+              <p className="text-sm">zebdaoui a fini tout les gateaux</p>
+              <p className="text-xs text-gray-500">2 days ago</p>
+            </div>
+          </div>
+          <div className=" border-b  grid grid-cols-4 h-16">
+            <div className="   p-0  w-2/3 mx-auto my-auto align-middle text-center text-white rounded-lg bg-gray-500">
+              old
+            </div>
+            <div className="col-span-3 py-2   text-left">
+              <p className="text-sm">zebdaoui a fini tout les gateaux</p>
+              <p className="text-xs text-gray-500">2 days ago</p>
+            </div>
+          </div>
+          <div className=" border-b  grid grid-cols-4 h-16">
+            <div className="   p-0  w-2/3 mx-auto my-auto align-middle text-center text-white rounded-lg bg-gray-500">
+              old
+            </div>
+            <div className="col-span-3 py-2   text-left">
+              <p className="text-sm">zebdaoui a fini tout les gateaux</p>
+              <p className="text-xs text-gray-500">2 days ago</p>
+            </div>
+          </div>
+          
+        </div>
       </Modal>
     </div>
   );

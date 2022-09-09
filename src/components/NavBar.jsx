@@ -22,7 +22,6 @@ const customStyles = {
     transform: "translate(-50%, -50%)",
     borderRadius: "10px",
     padding: "40px",
-    
   },
 };
 
@@ -68,9 +67,10 @@ function NavBar() {
         isOpen={modalIsOpen}
         onAfterOpen={afterOpenModal}
         onRequestClose={closeModal}
-        style={customStyles}
         contentLabel="Example Modal"
-      >
+        style={Object.assign(customStyles, { overlay: { background: 'transparent' } })}
+        
+        >
         {/* Modal Header */}
         <div className=" flex justify-between mb-4 ">
           <p>Notification</p>

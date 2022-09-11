@@ -4,7 +4,6 @@ import autoTable from 'jspdf-autotable';
 import user from '../../assets/images/user.png'
 import { useState, useEffect } from "react";
 import { axiosInstance } from "../../AxiosInstance/axios.instance";
-
 const Confirmation = ({ prevStep, nextStep, values }) => {
   const [entreprise, setEntreprise] = useState([]);
   useEffect(() => {

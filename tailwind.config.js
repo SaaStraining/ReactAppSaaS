@@ -18,6 +18,8 @@ module.exports = {
       blueoy: "#00A3FF",
       greenoy : "#36CD69",
       yelloy : "#FFC259",
+      greenelec : "#DEFF4F",
+      bluelec: "#0F93FE",
       gray: {
         50: '#F9FAFB',
         100: '#F3F4F6',

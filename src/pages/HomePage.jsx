@@ -6,6 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Header from '../components/HomeCompo/Header';
 import Main from '../components/HomeCompo/Main';
 import UpHeader from '../components/HomeCompo/UpHeader';
+import CallMain from '../components/HomeCompo/CallMain';
 // minified version is also included
 // import 'react-toastify/dist/ReactToastify.min.css';
 
@@ -17,7 +18,7 @@ function HomePage(){
       <UpHeader/>
       <Header/>
       <Main/>
-
+      <CallMain/>
     </div>
   );
 }

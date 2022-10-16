@@ -7,6 +7,11 @@
   src: url(../src/fonts/CIRCULARSTD-MEDIUM.OTF);
 }
 
+@font-face {
+  font-family: 'Phonk';
+  src: url(../src/fonts/PHONK-REGULAR-DEMO.OTF);
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 body { 

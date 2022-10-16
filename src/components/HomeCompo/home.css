@@ -2,3 +2,13 @@
     background-image: url(../../assets/images/bg-index.png);
     background-size: cover;
 }
+
+.Tnm{
+    font-family: 'Phonk';
+}
+.Res_main{font-weight: bold;}
+.Res_main:hover{
+    background-color: transparent;
+    color: #DEFF4F;
+    border:  #DEFF4F 2px solid;
+}

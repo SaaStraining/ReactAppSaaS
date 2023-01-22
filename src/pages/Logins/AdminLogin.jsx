@@ -33,6 +33,9 @@ function AdminLogin() {
         });
         }
         console.log(res.data)
+        setTimeout(() => {
+          window.location.href = "/dashboard";
+      }, 1000);
       })
           .catch(error => {
               toast("Probleme au serveur", {
